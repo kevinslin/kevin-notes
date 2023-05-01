@@ -12,6 +12,10 @@ def first_paragraph(html):
     return str(soup.find("p"))
 
 
+def noteURLPath(til):
+    return f"/{til['topic']}/{til['slug']}-{til['id']}"
+
+
 def highlight(s):
     s = html.escape(s)
     s = s.replace("b4de2a49c8", "<strong>").replace("8c94a2ed4b", "</strong>")
@@ -53,6 +57,7 @@ def extra_template_vars(request, datasette):
         "highlight": highlight,
         "first_paragraph": first_paragraph,
         "related_tils": related_tils,
+        "noteURLPath": noteURLPath,
     }
 
 

@@ -9,7 +9,7 @@
     <h2>{{ row.topic }}</h2>
     <ul>
         {% for til in sql("select * from til where topic = :topic order by created_utc desc", {"topic": row.topic}, database="tils") %}
-            <li><a href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - {{ til.created[:10] }}</li>
+            <li><a href="{{noteURLPath(til)}}">{{ til.title }}</a> - {{ til.created[:10] }}</li>
         {% endfor %}
     </ul>
 {% endfor %}

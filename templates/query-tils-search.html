@@ -50,7 +50,7 @@ pre strong {
 {% endif %}
     
 {% for til in rows %}
-    <h3><span class="topic"><a href="/{{ til.topic }}">{{ til.topic }}</a></span> <a href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - {{ til.created[:10] }}</h3>
+    <h3><span class="topic"><a href="/{{ til.topic }}">{{ til.topic }}</a></span> <a href="{{noteURLPath(til)}}">{{ til.title }}</a> - {{ til.created[:10] }}</h3>
     <pre>{{ highlight(til.snippet)|safe }}</pre>
 {% endfor %}
 
