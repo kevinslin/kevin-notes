@@ -22,10 +22,13 @@ def build_database(repo_path):
         title = metadata["title"]
         body = content
         id = metadata["id"]
+        htag = metadata.get("htag", "none")
+        topic = htag.rsplit(".", 1)[-1]
         created = datetime.fromtimestamp(metadata["created"] / 1000).isoformat()
         updated = datetime.fromtimestamp(metadata["updated"] / 1000).isoformat()
         path = str(filepath.relative_to(root))
         slug = filepath.stem
+        # TODO: update
         url = "https://github.com/simonw/til/blob/main/{}".format(path)
         # Do we need to render the markdown?
         path_slug = path.replace("/", "_")
@@ -36,13 +39,12 @@ def build_database(repo_path):
         except (NotFoundError, KeyError):
             previous_body = None
             previous_html = None
-        # TODO: do not hardcode
-        sample_ts = datetime.fromtimestamp(1672537600).isoformat()
         record = {
             "id": id,
             "path": path_slug,
             "slug": slug,
-            "topic": path.split("/")[0],
+            "topic": topic,
+            "htag": htag,
             "title": title,
             "url": url,
             "body": body,
@@ -52,6 +54,7 @@ def build_database(repo_path):
             "updated_utc": updated,
             "updated": updated,
         }
+        # TODO: use dendron version
         if (body != previous_body) or not previous_html:
             retries = 0
             response = None
