@@ -1,0 +1,12 @@
+{
+  "name": "til",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/simonw/til.git",
+  "author": "Kevin <kevin@dendron.so>",
+  "license": "MIT",
+  "scripts": {
+    "build": "python build_database.py",
+    "start": "datasette serve tils.db --metadata metadata.yaml --static static:static --plugins-dir plugins --template-dir templates "
+  }
+}
