@@ -1,8 +1,9 @@
 {% extends "til_base.html" %}
+{% set id = slug.split('-')[-1] %}
 
 {% set tils = sql("""
-    select * from til where path = :topic || '_' || :slug || '.md'
-""", {"topic": topic, "slug": slug}, database="tils")
+    select * from til where id = :id
+""", {"id": id}, database="tils")
 %}
 {% set til = tils[0] %}
 {% if not tils %}

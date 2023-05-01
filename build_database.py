@@ -1,4 +1,4 @@
-from datetime import timezone
+from datetime import timezone, datetime
 import httpx
 import git
 import os
@@ -7,40 +7,21 @@ from urllib.parse import urlencode
 import sqlite_utils
 from sqlite_utils.db import NotFoundError
 import time
+import frontmatter
 
 root = pathlib.Path(__file__).parent.resolve()
 
 
-def created_changed_times(repo_path, ref="main"):
-    created_changed_times = {}
-    repo = git.Repo(repo_path, odbt=git.GitDB)
-    commits = reversed(list(repo.iter_commits(ref)))
-    for commit in commits:
-        dt = commit.committed_datetime
-        affected_files = list(commit.stats.files.keys())
-        for filepath in affected_files:
-            if filepath not in created_changed_times:
-                created_changed_times[filepath] = {
-                    "created": dt.isoformat(),
-                    "created_utc": dt.astimezone(timezone.utc).isoformat(),
-                }
-            created_changed_times[filepath].update(
-                {
-                    "updated": dt.isoformat(),
-                    "updated_utc": dt.astimezone(timezone.utc).isoformat(),
-                }
-            )
-    return created_changed_times
-
-
 def build_database(repo_path):
-    all_times = created_changed_times(repo_path)
     db = sqlite_utils.Database(repo_path / "tils.db")
     table = db.table("til", pk="path")
-    for filepath in root.glob("*/*.md"):
+    for filepath in root.glob("dendron/**/*.md"):
+        print(filepath)
         fp = filepath.open()
-        title = fp.readline().lstrip("#").strip()
-        body = fp.read().strip()
+        metadata, content = frontmatter.parse(fp.read().strip())
+        title = metadata["title"]
+        body = content
+        id = metadata["id"]
         path = str(filepath.relative_to(root))
         slug = filepath.stem
         url = "https://github.com/simonw/til/blob/main/{}".format(path)
@@ -53,13 +34,21 @@ def build_database(repo_path):
         except (NotFoundError, KeyError):
             previous_body = None
             previous_html = None
+        # TODO: do not hardcode
+        sample_ts = datetime.fromtimestamp(1672537600).isoformat()
         record = {
+            "id": id,
             "path": path_slug,
             "slug": slug,
             "topic": path.split("/")[0],
             "title": title,
             "url": url,
             "body": body,
+            # TODO
+            "created_utc": sample_ts,
+            "created": sample_ts,
+            "updated_utc": sample_ts,
+            "updated": sample_ts,
         }
         if (body != previous_body) or not previous_html:
             retries = 0
@@ -68,7 +57,9 @@ def build_database(repo_path):
                 headers = {}
                 if os.environ.get("MARKDOWN_GITHUB_TOKEN"):
                     headers = {
-                        "authorization": "Bearer {}".format(os.environ["MARKDOWN_GITHUB_TOKEN"])
+                        "authorization": "Bearer {}".format(
+                            os.environ["MARKDOWN_GITHUB_TOKEN"]
+                        )
                     }
                 response = httpx.post(
                     "https://api.github.com/markdown",
@@ -94,7 +85,6 @@ def build_database(repo_path):
                 assert False, "Could not render {} - last response was {}".format(
                     path, response.headers
                 )
-        record.update(all_times[path])
         with db.conn:
             table.upsert(record, alter=True)
 
@@ -104,4 +94,5 @@ def build_database(repo_path):
 
 
 if __name__ == "__main__":
+    print("building database...")
     build_database(root)
