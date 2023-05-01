@@ -19,6 +19,7 @@ from dendron_sdk.environment import FernApiEnvironment
 
 root = pathlib.Path(__file__).parent.resolve()
 DENDRON_CLIENT = DendronClient(environment=FernApiEnvironment.LOCAL)
+GITHUB_BASE_URL = "https://github.com/kevinslin/kevinweblog"
 
 
 def build_database(repo_path):
@@ -38,7 +39,7 @@ def build_database(repo_path):
         path = str(filepath.relative_to(root))
         slug = filepath.stem
         # TODO: update
-        url = "https://github.com/simonw/til/blob/main/{}".format(path)
+        url = f"{GITHUB_BASE_URL}/blob/main/{path}"
         # Do we need to render the markdown?
         path_slug = path.replace("/", "_")
         try:
