@@ -2,9 +2,10 @@
 id: u2xdpkyrxgz7cows09161yp
 title: Publishing with Datasett
 desc: ''
-updated: 1682961874325
+updated: 1682978944963
 created: 1682960190821
 htag: vpkg.datasette
+public: false
 ---
 
 Decided to keep a weblog my activites.

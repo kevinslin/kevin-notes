@@ -65,47 +65,9 @@ def build_database(repo_path):
         }
         # TODO: use dendron version
         if (body != previous_body) or not previous_html:
-<<<<<<< HEAD
-            retries = 0
-            response = None
-            while retries < 3:
-                headers = {}
-                if os.environ.get("MARKDOWN_GITHUB_TOKEN"):
-                    headers = {
-                        "authorization": "Bearer {}".format(
-                            os.environ["MARKDOWN_GITHUB_TOKEN"]
-                        )
-                    }
-                response = httpx.post(
-                    "https://api.github.com/markdown",
-                    json={
-                        # mode=gfm would expand #13 issue links and suchlike
-                        "mode": "markdown",
-                        "text": body,
-                    },
-                    headers=headers,
-                )
-                if response.status_code == 200:
-                    record["html"] = response.text
-                    print("Rendered HTML for {}".format(path))
-                    break
-                elif response.status_code == 401:
-                    assert False, "401 Unauthorized error rendering markdown"
-                else:
-                    print(response.status_code, response.headers)
-                    print("  sleeping 60s")
-                    time.sleep(60)
-                    retries += 1
-            else:
-                assert False, "Could not render {} - last response was {}".format(
-                    path, response.headers
-                )
-        record.update(all_times[path])
-=======
             response = DENDRON_CLIENT.markdown_render(request={"content": body})
             record["html"] = response.content
             print("Rendered HTML for {}".format(path))
->>>>>>> kevin
         with db.conn:
             table.upsert(record, alter=True)
 
