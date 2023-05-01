@@ -33,7 +33,7 @@ databases:
         order by
           til_fts.rank limit 20
       feed:
-        title: Simon Willison TIL
+        title: Kevin S Lin Weblog
         sql: |-
           SELECT
             'tag:til.simonwillison.net,2020-04-30:' || path as atom_id,
@@ -50,7 +50,7 @@ databases:
           limit
             15
       feed_by_topic:
-        title: Simon Willison TIL for topic
+        title: Kevin S Lin Weblog for topic
         sql: |-
           SELECT
             'tag:til.simonwillison.net,2020-04-30:' || path as atom_id,
@@ -72,4 +72,4 @@ databases:
       til:
         sort_desc: updated_utc
         facets:
-        - topic
+          - topic
