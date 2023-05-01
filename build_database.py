@@ -64,8 +64,10 @@ def build_database(repo_path):
             "updated": updated,
         }
         # TODO: use dendron version
-        response = DENDRON_CLIENT.markdown_render(request={"content": body})
-        record["html"] = response.content
+        if (body != previous_body) or not previous_html:
+            response = DENDRON_CLIENT.markdown_render(request={"content": body})
+            record["html"] = response.content
+            print("Rendered HTML for {}".format(path))
         with db.conn:
             table.upsert(record, alter=True)
 

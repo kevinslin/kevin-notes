@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "python build_database.py",
-    "start": "datasette serve tils.db --metadata metadata.yaml --static static:static --plugins-dir plugins --template-dir templates "
+    "start": "datasette serve tils.db --metadata metadata.yaml --static static:static --plugins-dir plugins --template-dir templates ",
+    "script:regenerate": ""
   }
 }
