@@ -22,6 +22,8 @@ def build_database(repo_path):
         title = metadata["title"]
         body = content
         id = metadata["id"]
+        created = datetime.fromtimestamp(metadata["created"] / 1000).isoformat()
+        updated = datetime.fromtimestamp(metadata["updated"] / 1000).isoformat()
         path = str(filepath.relative_to(root))
         slug = filepath.stem
         url = "https://github.com/simonw/til/blob/main/{}".format(path)
@@ -45,10 +47,10 @@ def build_database(repo_path):
             "url": url,
             "body": body,
             # TODO
-            "created_utc": sample_ts,
-            "created": sample_ts,
-            "updated_utc": sample_ts,
-            "updated": sample_ts,
+            "created_utc": created,
+            "created": created,
+            "updated_utc": updated,
+            "updated": updated,
         }
         if (body != previous_body) or not previous_html:
             retries = 0
