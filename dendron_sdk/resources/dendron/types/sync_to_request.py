@@ -14,6 +14,9 @@ class SyncToRequest(pydantic.BaseModel):
     target_format: str = pydantic.Field(alias="targetFormat")
     include: str
     exclude: str
+    delete_missing: typing.Optional[bool] = pydantic.Field(
+        alias="deleteMissing", description=("should delete files that are not present in dest. default is false\n")
+    )
 
     def json(self, **kwargs: typing.Any) -> str:
         kwargs_with_defaults: typing.Any = {"by_alias": True, "exclude_unset": True, **kwargs}
