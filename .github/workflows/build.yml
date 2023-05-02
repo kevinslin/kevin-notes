@@ -87,7 +87,6 @@ jobs:
         datasette publish vercel tils.db \
           --token $NOW_TOKEN \
           --project kevin-weblog \
-          --scope datasette \
           --metadata metadata.yaml \
           --static static:static \
           --install datasette-template-sql \
