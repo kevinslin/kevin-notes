@@ -689,7 +689,7 @@ Search these TILs at https://til.simonwillison.net/
 
 * [Interpreting photo orientation and locations in EXIF data](https://github.com/simonw/til/blob/main/exif/orientation-and-location.md) - 2023-04-22
 
-## me
+## post
 
-* [Taking a Break](https://github.com/kevinslin/kevinweblog/blob/main/dendron/weblog/journal/2023/05/01/taking-a-break.md) - 2023-05-01
+* [Uno](https://github.com/kevinslin/kevinweblog/blob/main/dendron/weblog/journal/2023/05/01/uno.md) - 2023-05-01
 <!-- index ends -->
