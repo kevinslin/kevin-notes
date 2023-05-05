@@ -4,12 +4,19 @@ My Today I Learned snippets. Inspired by [jbranchaud/til](https://github.com/jbr
 
 Search these TILs at https://til.simonwillison.net/
 
-<!-- count starts -->3<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->7<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## post
 
 * [Uno](https://github.com/kevinslin/kevinweblog/blob/main/dendron/weblog/journal/2023/05/01/uno.md) - 2023-05-01
+
+## journal
+
+* [Daily Journal](https://github.com/kevinslin/kevinweblog/blob/main/dendron/daily/journal/2023/05/01/public.md) - 2023-05-01
+* [Daily Journal](https://github.com/kevinslin/kevinweblog/blob/main/dendron/daily/journal/2023/05/02/public.md) - 2023-05-02
+* [Daily Journal](https://github.com/kevinslin/kevinweblog/blob/main/dendron/daily/journal/2023/05/03/public.md) - 2023-05-03
+* [Daily Journal](https://github.com/kevinslin/kevinweblog/blob/main/dendron/daily/journal/2023/05/04/public.md) - 2023-05-05
 
 ## webtech
 
