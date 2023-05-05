@@ -2,7 +2,7 @@
 id: minijsfdl21eswrropmp8jn
 title: Docs Related Ideas
 desc: ''
-updated: 1683044228688
+updated: 1683059514997
 created: 1683042124322
 tags:
   - ideas
@@ -50,6 +50,16 @@ My shortlist
     - markets:
         - who: doc writers
     - dependsOn: coverage report for documentation
+
+- doc dependency checker ^1kpyzb2os90n
+    - difficulty: unkown
+    - interest: mid
+    - what:
+        - link doccumentation to code modules
+        - get an update when cod echanges
+        - be able to have list of changes when going to docs
+
+- sql for markdown
 
 - api reference vs library reference #stage.sprout
     - we have docs based on openapi spec, what about libraries?
