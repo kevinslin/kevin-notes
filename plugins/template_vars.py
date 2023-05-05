@@ -31,7 +31,7 @@ def extra_template_vars(request, datasette):
         words = list(set(text.lower().strip().split()))
         sql = """
         select
-          til.topic, til.slug, til.title, til.created
+          til.id, til.topic, til.slug, til.title, til.created
         from
           til
           join til_fts on til.rowid = til_fts.rowid

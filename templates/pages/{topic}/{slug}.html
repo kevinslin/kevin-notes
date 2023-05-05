@@ -40,7 +40,7 @@
   <h3>Related</h3>
   <ul class="related">
     {% for til in related %}
-    <li><span class="topic">{{ til.topic }}</span> <a href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - {{ til.created[:10] }}</li>
+    <li><span class="topic">{{ til.topic }}</span> <a href="{{noteURLPath(til)}}">{{ til.title }}</a> - {{ til.created[:10] }}</li>
     {% endfor %}
   </ul>
 {% endif %}
