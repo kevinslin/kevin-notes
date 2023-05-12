@@ -4,7 +4,7 @@ My Today I Learned snippets. Inspired by [jbranchaud/til](https://github.com/jbr
 
 Search these TILs at https://til.simonwillison.net/
 
-<!-- count starts -->8<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
+<!-- count starts -->9<!-- count ends --> TILs so far. <a href="https://til.simonwillison.net/til/feed.atom">Atom feed here</a>.
 
 <!-- index starts -->
 ## post
@@ -29,4 +29,8 @@ Search these TILs at https://til.simonwillison.net/
 ## none
 
 * [Public](https://github.com/kevinslin/kevinweblog/blob/main/dendron/daily/journal/2023/05/05/public.md) - 2023-05-06
+
+## til
+
+* [Gpt Link Organizer](https://github.com/kevinslin/kevinweblog/blob/main/dendron/til/journal/2023/05/12/gpt-link-organizer.md) - 2023-05-12
 <!-- index ends -->
