@@ -2,12 +2,12 @@
 id: s9t8fl6ckisxy9e8id7jqun
 title: Some thoughts on static site generators
 desc: ''
-updated: 1683003257531
+updated: 1684296891864
 created: 1683003170608
 tags:
   - status.draft
   - stage.seed
-htag: webtech
+htag: take
 ---
 
 There are a lot of static site generators in 2023. 

@@ -2,11 +2,11 @@
 id: minijsfdl21eswrropmp8jn
 title: Docs Related Ideas
 desc: ''
-updated: 1683059514997
+updated: 1684296670871
 created: 1683042124322
 tags:
   - ideas
-htag: docs
+htag: ideas
 ---
 
 The write the docs conference is coming up this week. Been thinking of various doc related ideas for the conference

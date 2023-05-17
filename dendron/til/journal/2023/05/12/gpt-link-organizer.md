@@ -2,14 +2,14 @@
 id: 5m0ttcdz94n75rgxo4ujyoh
 title: Gpt Link Organizer
 desc: ''
-updated: 1683902613342
+updated: 1684296908198
 created: 1683902204999
 tags: []
 url: ''
 date: ''
 original_vault: kevin-public
 public: true
-htag: til
+htag: _til
 ---
 You can use GPT to organize links
 
