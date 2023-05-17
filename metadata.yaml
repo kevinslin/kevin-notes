@@ -33,7 +33,7 @@ databases:
         order by
           note_fts.rank limit 20
       feed:
-        title: Kevin S Lin Weblog
+        title: Kevin S Lin Notes
         sql: |-
           SELECT
             'tag:note.simonwillison.net,2020-04-30:' || path as atom_id,
@@ -50,7 +50,7 @@ databases:
           limit
             15
       feed_by_topic:
-        title: Kevin S Lin Weblog for topic
+        title: Kevin S Lin Notes for topic
         sql: |-
           SELECT
             'tag:note.simonwillison.net,2020-04-30:' || path as atom_id,

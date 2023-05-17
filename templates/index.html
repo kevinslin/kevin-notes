@@ -1,6 +1,6 @@
 {% extends "til_base.html" %}
 
-{% block title %}Kevin S Lin: Weblog{% endblock %}<!DOCTYPE html>
+{% block title %}Kevin S Lin: Notes{% endblock %}<!DOCTYPE html>
 
 {% block extra_head %}
 <link href="https://github.com/simonw" rel="me">
@@ -49,7 +49,7 @@ h1 {
 
 {% block body %}
 {% set note_count = sql("select count(*) from NOTE", database="notes")[0][0] %}
-<h1>Kevin S Lin: Weblog</h1>
+<h1>Kevin S Lin: Notes</h1>
 <p> A log of learnings, thoughts, and records. Collected in <a href="https://github.com/kevinslin/kevinweblog">kevinslin/kevinweblog</a>. You may also enjoy <a href="https://bit.kevinslin.com/">my newsletter</a>.
 <br/>
 This site is a fork of <a href="https://github.com/simonw/til">simon/til</a>
@@ -77,7 +77,7 @@ This site is a fork of <a href="https://github.com/simonw/til">simon/til</a>
 
 <form action="/notes/search">
     <p>
-        <input type="search" name="q" placeholder="Search {{ til_count }} TILs">
+        <input type="search" name="q" placeholder="Search {{ til_count }} Notes">
         <input type="submit" value="Search">
     </p>
 </form>
