@@ -11,11 +11,11 @@ def register_routes():
                 "/{topic}/{slug}".format(**request.url_vars), status=301
             ),
         ),
-        ("^/til/feed.atom$", lambda: Response.redirect("/tils/feed.atom", status=301)),
+        ("^/til/feed.atom$", lambda: Response.redirect("/notes/feed.atom", status=301)),
         (
             "^/til$",
             lambda request: Response.redirect(
-                "/tils"
+                "/notes"
                 + (("?" + request.query_string) if request.query_string else ""),
                 status=301,
             ),
@@ -23,7 +23,7 @@ def register_routes():
         (
             "^/til/search$",
             lambda request: Response.redirect(
-                "/tils/search"
+                "/notes/search"
                 + (("?" + request.query_string) if request.query_string else ""),
                 status=301,
             ),

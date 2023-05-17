@@ -9,12 +9,12 @@ plugins:
   datasette-block-robots:
     literal: |-
       User-agent: *
-      Disallow: /tils
+      Disallow: /notes
   datasette-sitemap:
     sql: |-
       select '/' || topic || '/' || slug as path from til
 databases:
-  tils:
+  notes:
     queries:
       search: |
         select

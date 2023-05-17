@@ -1,21 +1,21 @@
 {% extends "til_base.html" %}
 
-{% set tils = sql("""
+{% set notes = sql("""
     select * from til where topic = :topic order by created_utc desc
-""", {"topic": topic}, database="tils")
+""", {"topic": topic}, database="notes")
 %}
 
 {% block title %}Kevin S Lin: Weblog on {{ topic }}{% endblock %}<!DOCTYPE html>
 
 {% block body %}
 
-{% if not tils %}
+{% if not notes %}
     {{ raise_404("No TILs found") }}
 {% endif %}
 
 <h1>Kevin S Lin: Weblog on {{ topic }}</h1>
 
-<!-- <p><a style="text-decoration: none" href="/tils/feed_by_topic.atom?topic={{ topic }}" title="Atom feed"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 256 256">
+<!-- <p><a style="text-decoration: none" href="/notes/feed_by_topic.atom?topic={{ topic }}" title="Atom feed"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 256 256">
     <defs>
     <linearGradient id="a" x1=".1" x2=".9" y1=".1" y2=".9">
         <stop offset="0" stop-color="#E3702D" />
@@ -36,7 +36,7 @@
     </svg> Atom feed for {{ topic }}</a></p> -->
 
 
-{% for til in tils %}
+{% for til in notes %}
     <h3><span class="topic">{{ til.topic }}</span> <a href="{{noteURLPath(til)}}">{{ til.title }}</a> - {{ til.created[:10] }}</h3>
     {{ first_paragraph(til["html"]).replace("</p>", " &#8230; </p>")|safe }}
 {% endfor %}

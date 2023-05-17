@@ -1,12 +1,12 @@
 {% extends "til_base.html" %}
 {% set id = slug.split('-')[-1] %}
 
-{% set tils = sql("""
+{% set notes = sql("""
     select * from til where id = :id
-""", {"id": id}, database="tils")
+""", {"id": id}, database="notes")
 %}
-{% set til = tils[0] %}
-{% if not tils %}
+{% set til = notes[0] %}
+{% if not notes %}
     {% set raised = raise_404("TIL not found") %}
 {% endif %}
 

@@ -28,7 +28,7 @@ This is a review of https://github.com/simonw/til
 root = pathlib.Path(__file__).parent.resolve()
 ...
 def build_database():
-    db = sqlite_utils.Database(repo_path / "tils.db")
+    db = sqlite_utils.Database(repo_path / "notes.db")
     for filepath in root.glob("*/*.md"):
         ...
 ```

@@ -5,10 +5,10 @@
 {% block body %}
 <h1>Kevin S Lin:  all logs</h1>
 
-{% for row in sql("select topic from til group by topic order by max(created_utc) desc", database="tils") %}
+{% for row in sql("select topic from til group by topic order by max(created_utc) desc", database="notes") %}
     <h2>{{ row.topic }}</h2>
     <ul>
-        {% for til in sql("select * from til where topic = :topic order by created_utc desc", {"topic": row.topic}, database="tils") %}
+        {% for til in sql("select * from til where topic = :topic order by created_utc desc", {"topic": row.topic}, database="notes") %}
             <li><a href="{{noteURLPath(til)}}">{{ til.title }}</a> - {{ til.created[:10] }}</li>
         {% endfor %}
     </ul>

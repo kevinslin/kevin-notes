@@ -123,7 +123,7 @@ The script is run by [this GitHub Actions workflow](https://github.com/simonw/ti
 
 ```python
 def generate_screenshots(root):
-    db = sqlite_utils.Database(root / "tils.db")
+    db = sqlite_utils.Database(root / "notes.db")
 
     # If the old 'shot' column exists, drop it
     if "shot" in db["til"].columns_dict:

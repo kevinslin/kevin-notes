@@ -58,7 +58,7 @@ def render_md(body, path, record):
 
 
 def build_database(repo_path):
-    db = sqlite_utils.Database(repo_path / "tils.db")
+    db = sqlite_utils.Database(repo_path / "notes.db")
     table = db.table("til", pk="path")
     for filepath in root.glob("dendron/**/*.md"):
         print(filepath)

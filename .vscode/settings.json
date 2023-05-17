@@ -4,8 +4,8 @@
     {
       "previewLimit": 50,
       "driver": "SQLite",
-      "name": "tils",
-      "database": "${workspaceFolder:til}/tils.db",
+      "name": "notes",
+      "database": "${workspaceFolder:til}/notes.db",
       "group": "blog"
     }
   ]
