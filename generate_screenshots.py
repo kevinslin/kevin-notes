@@ -15,7 +15,7 @@ SHOT_HASH_PATHS = [
 
 def s3_contents():
     proc = subprocess.run(
-        ["s3-credentials", "list-bucket", "til.simonwillison.net"], capture_output=True
+        ["s3-credentials", "list-bucket", "note.simonwillison.net"], capture_output=True
     )
     return [item["Key"] for item in json.loads(proc.stdout)]
 
@@ -50,8 +50,8 @@ def generate_screenshots(root):
     db = sqlite_utils.Database(root / "notes.db")
 
     # If the old 'shot' column exists, drop it
-    if "shot" in db["til"].columns_dict:
-        db["til"].transform(drop=["shot"])
+    if "shot" in db["note"].columns_dict:
+        db["note"].transform(drop=["shot"])
 
     # shot_hash incorporates a hash of key templates
     shot_html_hash = hashlib.md5()
@@ -61,20 +61,20 @@ def generate_screenshots(root):
 
     s3_keys = s3_contents()
 
-    for row in db["til"].rows:
+    for row in db["note"].rows:
         path = row["path"]
         html = row["html"]
         shot_hash = hashlib.md5((shot_html_hash + html).encode("utf-8")).hexdigest()
         shot_filename = "{}.jpg".format(shot_hash)
         if shot_hash != row.get("shot_hash") or shot_filename not in s3_keys:
             jpeg = jpeg_for_path("/{}/{}".format(row["topic"], row["slug"]))
-            db["til"].update(path, {"shot_hash": shot_hash}, alter=True)
+            db["note"].update(path, {"shot_hash": shot_hash}, alter=True)
             # Store it to S3
             subprocess.run(
                 [
                     "s3-credentials",
                     "put-object",
-                    "til.simonwillison.net",
+                    "note.simonwillison.net",
                     shot_filename,
                     "-",
                     "--content-type",

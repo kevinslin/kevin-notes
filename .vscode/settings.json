@@ -5,7 +5,7 @@
       "previewLimit": 50,
       "driver": "SQLite",
       "name": "notes",
-      "database": "${workspaceFolder:til}/notes.db",
+      "database": "${workspaceFolder:note}/notes.db",
       "group": "blog"
     }
   ]

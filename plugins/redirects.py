@@ -6,14 +6,14 @@ from datasette.utils.asgi import Response
 def register_routes():
     return (
         (
-            r"^/til/til/(?P<topic>[^_]+)_(?P<slug>[^\.]+)\.md$",
+            r"^/note/note/(?P<topic>[^_]+)_(?P<slug>[^\.]+)\.md$",
             lambda request: Response.redirect(
                 "/{topic}/{slug}".format(**request.url_vars), status=301
             ),
         ),
-        ("^/til/feed.atom$", lambda: Response.redirect("/notes/feed.atom", status=301)),
+        ("^/note/feed.atom$", lambda: Response.redirect("/notes/feed.atom", status=301)),
         (
-            "^/til$",
+            "^/note$",
             lambda request: Response.redirect(
                 "/notes"
                 + (("?" + request.query_string) if request.query_string else ""),
@@ -21,7 +21,7 @@ def register_routes():
             ),
         ),
         (
-            "^/til/search$",
+            "^/note/search$",
             lambda request: Response.redirect(
                 "/notes/search"
                 + (("?" + request.query_string) if request.query_string else ""),

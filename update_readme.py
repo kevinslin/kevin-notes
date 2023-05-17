@@ -14,7 +14,7 @@ COUNT_TEMPLATE = "<!-- count starts -->{}<!-- count ends -->"
 if __name__ == "__main__":
     db = sqlite_utils.Database(root / "notes.db")
     by_topic = {}
-    for row in db["til"].rows_where(order_by="created_utc"):
+    for row in db["note"].rows_where(order_by="created_utc"):
         by_topic.setdefault(row["topic"], []).append(row)
     index = ["<!-- index starts -->"]
     for topic, rows in by_topic.items():
@@ -34,7 +34,7 @@ if __name__ == "__main__":
         index_txt = "\n".join(index).strip()
         readme_contents = readme.open().read()
         rewritten = index_re.sub(index_txt, readme_contents)
-        rewritten = count_re.sub(COUNT_TEMPLATE.format(db["til"].count), rewritten)
+        rewritten = count_re.sub(COUNT_TEMPLATE.format(db["note"].count), rewritten)
         readme.open("w").write(rewritten)
     else:
         print("\n".join(index))

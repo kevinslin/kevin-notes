@@ -7,10 +7,10 @@ created: 1684296269258
 htag: take
 ---
 
-This is a review of https://github.com/simonw/til
+This is a review of https://github.com/simonw/note
 
 ## Code Review
-- source: https://github.com/simonw/til/blob/e2e4819d33613410efa533541262599f23fd6223/build_database.py#L32
+- source: https://github.com/simonw/note/blob/e2e4819d33613410efa533541262599f23fd6223/build_database.py#L32
 
 - datasette
 - very simple, single line of python

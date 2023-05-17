@@ -12,8 +12,8 @@ def first_paragraph(html):
     return str(soup.find("p"))
 
 
-def noteURLPath(til):
-    return f"/{til['topic']}/{til['slug']}-{til['id']}"
+def noteURLPath(note):
+    return f"/{note['topic']}/{note['slug']}-{note['id']}"
 
 
 def highlight(s):
@@ -24,22 +24,22 @@ def highlight(s):
 
 @hookimpl
 def extra_template_vars(request, datasette):
-    async def related_tils(til):
-        text = til["title"] + " " + til["body"]
+    async def related_tils(note):
+        text = note["title"] + " " + note["body"]
         text = non_alphanumeric.sub(" ", text)
         text = multi_spaces.sub(" ", text)
         words = list(set(text.lower().strip().split()))
         sql = """
         select
-          til.id, til.topic, til.slug, til.title, til.created
+          note.id, note.topic, note.slug, note.title, note.created
         from
-          til
-          join til_fts on til.rowid = til_fts.rowid
+          note
+          join til_fts on note.rowid = til_fts.rowid
         where
           til_fts match :words
           and not (
-            til.slug = :slug
-            and til.topic = :topic
+            note.slug = :slug
+            and note.topic = :topic
           )
         order by
           til_fts.rank
@@ -48,7 +48,7 @@ def extra_template_vars(request, datasette):
         """
         result = await datasette.get_database().execute(
             sql,
-            {"words": " OR ".join(words), "slug": til["slug"], "topic": til["topic"]},
+            {"words": " OR ".join(words), "slug": note["slug"], "topic": note["topic"]},
         )
         return result.rows
 

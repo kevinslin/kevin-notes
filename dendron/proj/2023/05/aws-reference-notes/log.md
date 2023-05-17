@@ -20,7 +20,7 @@ created: 1683817362705
 ### 2023-05-12
 
 - trying to preview gitbook build locally. this used to work fine bu they've went `notion` and made this no longer a workflow [2023-05-12 06:56]  [^1]
-    - theres [instructions](https://til.secretgeek.net/gitbook/use_gitbook_locally.html) to do this still using the gitbook cli but been running into issues with `node-gyp` and an xcode and none of the [suggested fixes](https://github.com/nodejs/node-gyp/issues/569) have helped
+    - theres [instructions](https://note.secretgeek.net/gitbook/use_gitbook_locally.html) to do this still using the gitbook cli but been running into issues with `node-gyp` and an xcode and none of the [suggested fixes](https://github.com/nodejs/node-gyp/issues/569) have helped
     - this is not a hill I want to die on, so moving forward
     - using the `git push` workflow for now
 

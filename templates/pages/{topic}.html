@@ -1,7 +1,7 @@
 {% extends "til_base.html" %}
 
 {% set notes = sql("""
-    select * from til where topic = :topic order by created_utc desc
+    select * from note where topic = :topic order by created_utc desc
 """, {"topic": topic}, database="notes")
 %}
 
@@ -36,9 +36,9 @@
     </svg> Atom feed for {{ topic }}</a></p> -->
 
 
-{% for til in notes %}
-    <h3><span class="topic">{{ til.topic }}</span> <a href="{{noteURLPath(til)}}">{{ til.title }}</a> - {{ til.created[:10] }}</h3>
-    {{ first_paragraph(til["html"]).replace("</p>", " &#8230; </p>")|safe }}
+{% for note in notes %}
+    <h3><span class="topic">{{ note.topic }}</span> <a href="{{noteURLPath(note)}}">{{ note.title }}</a> - {{ note.created[:10] }}</h3>
+    {{ first_paragraph(note["html"]).replace("</p>", " &#8230; </p>")|safe }}
 {% endfor %}
 
 {% endblock %}

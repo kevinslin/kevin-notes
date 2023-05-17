@@ -2,48 +2,48 @@
 {% set id = slug.split('-')[-1] %}
 
 {% set notes = sql("""
-    select * from til where id = :id
+    select * from note where id = :id
 """, {"id": id}, database="notes")
 %}
-{% set til = notes[0] %}
+{% set note = notes[0] %}
 {% if not notes %}
     {% set raised = raise_404("TIL not found") %}
 {% endif %}
 
-{% block title %}{{ til.title }} | Kevin's Weblog{% endblock %}
+{% block title %}{{ note.title }} | Kevin's Weblog{% endblock %}
 
 {% block extra_head %}
-<link rel="stylesheet" href="https://til.simonwillison.net/static/github-light.css">
+<link rel="stylesheet" href="https://note.simonwillison.net/static/github-light.css">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@simonw">
-<meta name="twitter:title" content="{{ til.title }}">
-<meta name="twitter:description" content="{{ til.body[:200] }}">
-<meta name="twitter:image" content="https://s3.amazonaws.com/til.simonwillison.net/{{ til.shot_hash }}.jpg">
+<meta name="twitter:title" content="{{ note.title }}">
+<meta name="twitter:description" content="{{ note.body[:200] }}">
+<meta name="twitter:image" content="https://s3.amazonaws.com/note.simonwillison.net/{{ note.shot_hash }}.jpg">
 <meta name="twitter:image:alt" content="Screenshot of this article">
-<meta property="og:url" content="https://til.simonwillison.net/{{ til.topic }}/{{ til.slug }}">
+<meta property="og:url" content="https://note.simonwillison.net/{{ note.topic }}/{{ note.slug }}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="{{ til.title }}">
-<meta property="og:description" content="{{ til.body[:200] }}">
-<meta property="og:image" content="https://s3.amazonaws.com/til.simonwillison.net/{{ til.shot_hash }}.jpg">
+<meta property="og:title" content="{{ note.title }}">
+<meta property="og:description" content="{{ note.body[:200] }}">
+<meta property="og:image" content="https://s3.amazonaws.com/note.simonwillison.net/{{ note.shot_hash }}.jpg">
 <meta property="og:image:alt" content="Screenshot of this article">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="400">
 {% endblock %}
 
 {% block body %}
-<h1>{{ til.title }}</h1>
+<h1>{{ note.title }}</h1>
 
-{{ til.html|safe }}
+{{ note.html|safe }}
 
-{% set related = related_tils(til) %}
+{% set related = related_tils(note) %}
 {% if related %}
   <h3>Related</h3>
   <ul class="related">
-    {% for til in related %}
-    <li><span class="topic">{{ til.topic }}</span> <a href="{{noteURLPath(til)}}">{{ til.title }}</a> - {{ til.created[:10] }}</li>
+    {% for note in related %}
+    <li><span class="topic">{{ note.topic }}</span> <a href="{{noteURLPath(note)}}">{{ note.title }}</a> - {{ note.created[:10] }}</li>
     {% endfor %}
   </ul>
 {% endif %}
 
-<p class="created">Created {{ til.created }}{% if til.created != til.updated %}, updated {{ til.updated }} &middot; <a href="{{ til.url|replace("https://github.com/simonw/til/blob/", "https://github.com/simonw/til/commits/") }}">History</a>{% endif %} &middot; <a href="{{ til.url }}">Edit</a></p>
+<p class="created">Created {{ note.created }}{% if note.created != note.updated %}, updated {{ note.updated }} &middot; <a href="{{ note.url|replace("https://github.com/simonw/note/blob/", "https://github.com/simonw/note/commits/") }}">History</a>{% endif %} &middot; <a href="{{ note.url }}">Edit</a></p>
 {% endblock %}

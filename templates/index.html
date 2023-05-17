@@ -52,7 +52,7 @@ h1 {
 <h1>Kevin S Lin: Weblog</h1>
 <p> A log of learnings, thoughts, and records. Collected in <a href="https://github.com/kevinslin/kevinweblog">kevinslin/kevinweblog</a>. You may also enjoy <a href="https://bit.kevinslin.com/">my newsletter</a>.
 <br/>
-This site is a fork of <a href="https://github.com/simonw/til">simon/til</a>
+This site is a fork of <a href="https://github.com/simonw/note">simon/note</a>
 </p>
 
 <!-- <p><a style="text-decoration: none" href="/notes/feed.atom" title="Atom feed"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 256 256">
@@ -83,16 +83,16 @@ This site is a fork of <a href="https://github.com/simonw/til">simon/til</a>
 </form>
 
 <p><strong>Browse by topic:</strong>
-{% for row in sql("select topic, count(*) as num_tils from til group by topic order by topic", database="notes") %}
+{% for row in sql("select topic, count(*) as num_tils from note group by topic order by topic", database="notes") %}
   <a title="{{ row.num_tils }} {{ "Entries" if row.num_tils > 1 else "Entry" }}" href="/{{ row.topic }}">{{ row.topic }}</a> {{ row.num_tils }}{% if not loop.last %} &middot;{% endif %}
 {% endfor %}
 </p>
 
 <h2>Recent Entries</h2>
 
-{% for til in sql("select * from til order by created_utc desc limit 30", database="notes") %}
-    <h3><span class="topic"><a href="/{{ til.topic }}">{{ til.topic }}</a></span> <a href="{{noteURLPath(til)}}">{{ til.title }}</a> - {{ til.created[:10] }}</h3>
-    {{ first_paragraph(til["html"]).replace("</p>", " &#8230; </p>")|safe }}
+{% for note in sql("select * from note order by created_utc desc limit 30", database="notes") %}
+    <h3><span class="topic"><a href="/{{ note.topic }}">{{ note.topic }}</a></span> <a href="{{noteURLPath(note)}}">{{ note.title }}</a> - {{ note.created[:10] }}</h3>
+    {{ first_paragraph(note["html"]).replace("</p>", " &#8230; </p>")|safe }}
 {% endfor %}
 
 <p><a href="/all">Browse all {{ til_count }} Entries</a></p>

@@ -49,9 +49,9 @@ pre strong {
     <p><em>No results for "{{ q }}"</em></p>
 {% endif %}
     
-{% for til in rows %}
-    <h3><span class="topic"><a href="/{{ til.topic }}">{{ til.topic }}</a></span> <a href="{{noteURLPath(til)}}">{{ til.title }}</a> - {{ til.created[:10] }}</h3>
-    <pre>{{ highlight(til.snippet)|safe }}</pre>
+{% for note in rows %}
+    <h3><span class="topic"><a href="/{{ note.topic }}">{{ note.topic }}</a></span> <a href="{{noteURLPath(note)}}">{{ note.title }}</a> - {{ note.created[:10] }}</h3>
+    <pre>{{ highlight(note.snippet)|safe }}</pre>
 {% endfor %}
 
 {% endblock %}
