@@ -7,7 +7,7 @@
 %}
 {% set note = notes[0] %}
 {% if not notes %}
-    {% set raised = raise_404("TIL not found") %}
+    {% set raised = raise_404("NOTE not found") %}
 {% endif %}
 
 {% block title %}{{ note.title }} | Kevin's Weblog{% endblock %}

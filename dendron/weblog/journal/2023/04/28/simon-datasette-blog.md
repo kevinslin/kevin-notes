@@ -1,16 +1,16 @@
 ---
 id: 4ahj6vy1l4e862ch2l2l16m
-title: Simon Datasette Blo
+title: Simon TIL
 desc: ''
-updated: 1684296885894
+updated: 1684297087024
 created: 1684296269258
 htag: take
 ---
 
-This is a review of https://github.com/simonw/note
+This is a review of https://github.com/simonw/til
 
 ## Code Review
-- source: https://github.com/simonw/note/blob/e2e4819d33613410efa533541262599f23fd6223/build_database.py#L32
+- source: https://github.com/simonw/til/blob/e2e4819d33613410efa533541262599f23fd6223/build_database.py#L32
 
 - datasette
 - very simple, single line of python
@@ -28,7 +28,7 @@ This is a review of https://github.com/simonw/note
 root = pathlib.Path(__file__).parent.resolve()
 ...
 def build_database():
-    db = sqlite_utils.Database(repo_path / "notes.db")
+    db = sqlite_utils.Database(repo_path / "tils.db")
     for filepath in root.glob("*/*.md"):
         ...
 ```

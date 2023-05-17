@@ -48,11 +48,11 @@ h1 {
 {% endblock %}
 
 {% block body %}
-{% set til_count = sql("select count(*) from TIL", database="notes")[0][0] %}
+{% set note_count = sql("select count(*) from NOTE", database="notes")[0][0] %}
 <h1>Kevin S Lin: Weblog</h1>
 <p> A log of learnings, thoughts, and records. Collected in <a href="https://github.com/kevinslin/kevinweblog">kevinslin/kevinweblog</a>. You may also enjoy <a href="https://bit.kevinslin.com/">my newsletter</a>.
 <br/>
-This site is a fork of <a href="https://github.com/simonw/note">simon/note</a>
+This site is a fork of <a href="https://github.com/simonw/til">simon/til</a>
 </p>
 
 <!-- <p><a style="text-decoration: none" href="/notes/feed.atom" title="Atom feed"><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 256 256">

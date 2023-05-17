@@ -1,6 +1,6 @@
 {% extends "til_base.html" %}
 
-{% block title %}TIL search: {{ q }}{% endblock %}
+{% block title %}NOTE search: {{ q }}{% endblock %}
 
 {% block extra_head %}
 <style>
@@ -36,7 +36,7 @@ pre strong {
 </style>
 {% endblock %}
 {% block body %}
-<h1>TIL search: {{ q }}</h1>
+<h1>NOTE search: {{ q }}</h1>
 
 <form action="/notes/search">
     <p>

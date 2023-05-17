@@ -34,15 +34,15 @@ def extra_template_vars(request, datasette):
           note.id, note.topic, note.slug, note.title, note.created
         from
           note
-          join til_fts on note.rowid = til_fts.rowid
+          join note_fts on note.rowid = note_fts.rowid
         where
-          til_fts match :words
+          note_fts match :words
           and not (
             note.slug = :slug
             and note.topic = :topic
           )
         order by
-          til_fts.rank
+          note_fts.rank
         limit
           5
         """

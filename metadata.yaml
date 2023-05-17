@@ -18,20 +18,20 @@ databases:
     queries:
       search: |
         select
-          til_fts.rank,
+          note_fts.rank,
           note.*,
-          snippet(til_fts, -1, 'b4de2a49c8', '8c94a2ed4b', '...', 60) as snippet
+          snippet(note_fts, -1, 'b4de2a49c8', '8c94a2ed4b', '...', 60) as snippet
         from
           note
-          join til_fts on note.rowid = til_fts.rowid
+          join note_fts on note.rowid = note_fts.rowid
         where
-          til_fts match case
+          note_fts match case
             :q
             when '' then 'nomatchforthisterm'
             else escape_fts(:q)
           end
         order by
-          til_fts.rank limit 20
+          note_fts.rank limit 20
       feed:
         title: Kevin S Lin Weblog
         sql: |-
