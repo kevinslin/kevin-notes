@@ -68,7 +68,7 @@ def build_database(repo_path):
         body = content
         id = metadata["id"]
         htag = metadata.get("htag", "none")
-        topic = htag.rsplit(".", 1)[-1]
+        topic = htag
         created = datetime.fromtimestamp(metadata["created"] / 1000).isoformat()
         updated = datetime.fromtimestamp(metadata["updated"] / 1000).isoformat()
         path = str(filepath.relative_to(root))
