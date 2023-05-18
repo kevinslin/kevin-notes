@@ -1,0 +1,17 @@
+
+{% if true %}
+{{ custom_redirect("https://kevinslin.com", 301) }}
+{% endif %}
+
+{% extends "til_base.html" %}
+{% block title %}Kevin's Notes{% endblock %}
+Hello world
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://note.simonwillison.net/static/github-light.css">
+<meta name="twitter:card" content="summary_large_image">
+{% endblock %}
+
+{% block body %}
+Body
+{% endblock %}
