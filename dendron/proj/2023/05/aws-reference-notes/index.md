@@ -2,7 +2,7 @@
 id: 59venpxjzsqdl4rtew9k55a
 title: Aws Reference Notes
 desc: ''
-updated: 1684296991875
+updated: 1684381340777
 created: 1684274567952
 tags:
   - scope
@@ -17,11 +17,13 @@ htag: project
 ---
 ## Index
 - [[Log|proj.2023.05.aws-reference-notes.log]]
+[[proj.2023.05.aws-reference-notes.public]]
+
 
 ## Goal
 Create set of reference notes 
 
-## Context
+<!-- ## Context
 
 ## Success Criteria
 
@@ -41,4 +43,4 @@ Create set of reference notes
 
 ### Outcomes
 
-### Carry Over Tasks
+### Carry Over Tasks -->
