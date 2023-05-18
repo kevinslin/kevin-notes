@@ -1,4 +1,5 @@
 from datetime import timezone, datetime
+from typing import List
 import httpx
 import git
 import os
@@ -60,6 +61,7 @@ def render_md(body, path, record):
 def build_database(repo_path):
     db = sqlite_utils.Database(repo_path / "notes.db")
     table = db.table("note", pk="path")
+    seen = []
     for filepath in root.glob("dendron/**/*.md"):
         print(filepath)
         fp = filepath.open()
@@ -77,6 +79,7 @@ def build_database(repo_path):
         url = f"{GITHUB_BASE_URL}/blob/main/{path}"
         # Do we need to render the markdown?
         path_slug = path.replace("/", "_")
+        seen.append(id)
         try:
             row = table.get(path_slug)
             previous_body = row["body"]
@@ -110,9 +113,18 @@ def build_database(repo_path):
         with db.conn:
             table.upsert(record, alter=True)
 
+    delete_removed_notes(db, seen)
     table.enable_fts(
         ["title", "body"], tokenize="porter", create_triggers=True, replace=True
     )
+
+def delete_removed_notes(db: sqlite_utils.Database, seen: List[str]):
+    seen_clean = [f"'{x}'" for x in seen]
+    sql = f'delete from note where id not in ({",".join(seen_clean)})'
+    print(sql)
+    cursor = db.execute(sql)
+    db.conn.commit()
+    print("Deleted {} notes".format(cursor.rowcount))
 
 
 if __name__ == "__main__":
