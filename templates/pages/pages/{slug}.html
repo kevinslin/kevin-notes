@@ -1,4 +1,3 @@
-{% extends "til_base.html" %}
 {% set id = slug.split('-')[-1] %}
 
 {% set notes = sql("""
@@ -10,6 +9,13 @@
     {% set raised = raise_404("NOTE not found") %}
 {% endif %}
 
+{% set slugExpected = noteURLSlugWithTopic(note) %}
+
+{% if (slugExpected != slug)  %}
+{{ custom_redirect(SITE_ROOT() + noteURLPath(note), 301) }}
+{% endif %}
+
+{% extends "til_base.html" %}
 {% block title %}{{ note.title }} | Kevin's Notes{% endblock %}
 
 {% block extra_head %}

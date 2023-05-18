@@ -7,14 +7,19 @@ non_alphanumeric = re.compile(r"[^a-zA-Z0-9\s]")
 multi_spaces = re.compile(r"\s+")
 
 
+def SITE_ROOT():
+  return "http://localhost:8001"
+  #return "https://notes.kevinslin.com"
+
 def first_paragraph(html):
     soup = Soup(html, "html.parser")
     return str(soup.find("p"))
 
+def noteURLSlugWithTopic(note):
+    return f"{note['topic']}-{note['slug']}-{note['id']}"
 
 def noteURLPath(note):
-    return f"/pages/{note['topic']}-{note['slug']}-{note['id']}"
-
+    return f"/pages/{noteURLSlugWithTopic(note)}"
 
 def highlight(s):
     s = html.escape(s)
@@ -58,6 +63,8 @@ def extra_template_vars(request, datasette):
         "first_paragraph": first_paragraph,
         "related_tils": related_tils,
         "noteURLPath": noteURLPath,
+        "noteURLSlugWithTopic": noteURLSlugWithTopic,
+        "SITE_ROOT": SITE_ROOT
     }
 
 
