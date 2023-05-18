@@ -2,7 +2,7 @@
 id: anpq6f6k8jmby1eciy8zsr2
 title: Daily Journal
 desc: ''
-updated: 1684383054812
+updated: 1684421878555
 created: 1684380089972
 htag: journal
 ---
@@ -17,6 +17,7 @@ That means the following pipeline:
 ```
 - source data -> airbyte (etl) -> datawarehouse (postgres) -> dbt -> hightouch (Retl) -> source data
 ```
+
 
 I have a dbt transformation that merges all contact data into a single table, with properties from the same user merged by last updated time across different CRMs. 
 
