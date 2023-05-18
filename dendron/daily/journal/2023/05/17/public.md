@@ -2,22 +2,22 @@
 id: anpq6f6k8jmby1eciy8zsr2
 title: Daily Journal
 desc: ''
-updated: 1684381307666
+updated: 1684383054812
 created: 1684380089972
 htag: journal
 ---
 
-Been working on building a universal address book that merges information from tools where I have contact information (linkedin, google, hubspot, etc) into a common datawarehouse (postgres) with a common schema. 
+Been working on a new project involving syncing data from various CRMs into a datawarehouse and then syncing that data back into said CRMs. 
 
-Once all contact data has been consolidated, I can dedup & merge information from different sources (eg. linkedin data into hubspot). 
+While the data is inside the warehouse, a user should be able to edit the individual entries and have them synced back to the CRM. At the same time, we also want users to still be able to edit entries in the CRMs directly. We want to do this without creating an endless loop of updates. 
 
-Data in the data warehouse also syncs back to downstream sources.
+I got inspired by the redux architecture and decided to model this as a "unidirectional data flow" problem. Data only flows in one direction and is never mutated from inside the db. 
 
-My use cases for this:
-- single source of truth for all my contact data
-- automatically dedup and merge information across all contact sources
-- run raw SQL against my contact data and be able to update information from contact sources via SQL 
-- use analytics tools like metabase to build dashboards against my contact data
-- leverage contact data inside of other tools (eg. autocomplete via chrome/vscode/native extension)
+That means the following pipeline:
+```
+- source data -> airbyte (etl) -> datawarehouse (postgres) -> dbt -> hightouch (Retl) -> source data
+```
 
+I have a dbt transformation that merges all contact data into a single table, with properties from the same user merged by last updated time across different CRMs. 
 
+The main challenge involves allowing for updates from the datawarehouse (or in my case, retool on top of the warehouse) without mutating the data. 

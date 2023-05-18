@@ -60,19 +60,19 @@ jobs:
     #     cd main
     #     python generate_screenshots.py
     #     sqlite-utils vacuum notes.db
-    - name: Update README
-      run: |-
-        cd main
-        python update_readme.py --rewrite
-        cat README.md
-    - name: Commit and push if README changed
-      run: |-
-        cd main
-        git diff
-        git config --global user.email "actions@users.noreply.github.com"
-        git config --global user.name "README-bot"
-        git diff --quiet || (git add README.md && git commit -m "Updated README")
-        git push
+    # - name: Update README
+    #   run: |-
+    #     cd main
+    #     python update_readme.py --rewrite
+    #     cat README.md
+    # - name: Commit and push if README changed
+    #   run: |-
+    #     cd main
+    #     git diff
+    #     git config --global user.email "actions@users.noreply.github.com"
+    #     git config --global user.name "README-bot"
+    #     git diff --quiet || (git add README.md && git commit -m "Updated README")
+    #     git push
     # - name: Upload latest notes.db to the S3 bucket
     #   env:
     #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
