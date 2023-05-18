@@ -13,7 +13,7 @@ def first_paragraph(html):
 
 
 def noteURLPath(note):
-    return f"/{note['topic']}/{note['slug']}-{note['id']}"
+    return f"/pages/{note['topic']}-{note['slug']}-{note['id']}"
 
 
 def highlight(s):

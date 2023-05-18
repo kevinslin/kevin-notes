@@ -84,7 +84,7 @@ This site is a fork of <a href="https://github.com/simonw/til">simon/til</a>
 
 <p><strong>Browse by topic:</strong>
 {% for row in sql("select topic, count(*) as num_tils from note group by topic order by topic", database="notes") %}
-  <a title="{{ row.num_tils }} {{ "Entries" if row.num_tils > 1 else "Entry" }}" href="/{{ row.topic }}">{{ row.topic }}</a> {{ row.num_tils }}{% if not loop.last %} &middot;{% endif %}
+  <a title="{{ row.num_tils }} {{ "Entries" if row.num_tils > 1 else "Entry" }}" href="/topics/{{ row.topic }}">{{ row.topic }}</a> {{ row.num_tils }}{% if not loop.last %} &middot;{% endif %}
 {% endfor %}
 </p>
 
