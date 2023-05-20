@@ -2,9 +2,10 @@
 id: 4ahj6vy1l4e862ch2l2l16m
 title: Simon TIL
 desc: ''
-updated: 1684297087024
+updated: 1684601736461
 created: 1684296269258
 htag: take
+topic: dev
 ---
 
 This is a review of https://github.com/simonw/til

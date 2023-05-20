@@ -2,9 +2,10 @@
 id: 5zhh9eoljlajaq56irv1qy9
 title: Natural Language SQL
 desc: ''
-updated: 1684253783502
+updated: 1684603588177
 created: 1684253612262
 htag: ideas
+topic: schemas
 ---
 
 Imagine if you could query your knowledge base with SQL. 

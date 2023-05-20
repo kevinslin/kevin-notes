@@ -2,9 +2,10 @@
 id: f4d5p74j0tgemp4tmdx114c
 title: Daily Journal
 desc: ''
-updated: 1684469573678
+updated: 1684602172909
 created: 1684436427516
 htag: journal
+topic: schemas
 ---
 
 Had some time to work on my [digital notes](https://github.com/kevinslin/kevinweblog.git) today. 

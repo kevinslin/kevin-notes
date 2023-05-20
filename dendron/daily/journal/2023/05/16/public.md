@@ -2,9 +2,10 @@
 id: zckio8docgnws69fj5m9tcy
 title: Daily Journal
 desc: ''
-updated: 1684298494711
+updated: 1684602197199
 created: 1684298143071
 htag: journal
+topic: llm
 ---
 
 Experimenting with using langchain and jupyter notebooks for ad-hoc tasks. 

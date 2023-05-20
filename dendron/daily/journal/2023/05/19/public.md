@@ -1,12 +1,11 @@
 ---
 id: bcyoh1ruh5b570m9vlhvgf9
-title: Public
+title: Daily Journal
 desc: ''
-updated: 1684557434196
+updated: 1684602064442
 created: 1684545450170
 htag: journal
-tags:
-  - gpt
+topic: llm
 ---
 
 Been working with GPT to classify AWS service links and running into some issues with hallucinations. 
@@ -54,4 +53,6 @@ The human prompt feeds in the available AWS git repositories as well as the serv
 
 I then further filtered the results as I had a source of truth (the actual list of valid git repositories). Running this filter, I ended up with 39/106 services. 
 
-In this particular use case, dealing with hallucinations is manageable because we have a source of truth and an easy way to verify. In many cases, its not as clear cut. 
+In this particular use case, dealing with hallucinations is manageable because we have a source of truth and an easy way to verify. Unfortunately not as clear cut in most other cases. 
+
+<!--|backlinks: [[res.pkm]]| -->

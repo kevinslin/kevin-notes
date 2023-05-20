@@ -2,9 +2,10 @@
 id: pqvq6wtxl0lfk5x22mpx5io
 title: Daily Journal
 desc: ''
-updated: 1683344107544
+updated: 1684602274982
 created: 1683254761339
 htag: journal
+topic: dev
 ---
 
 ## Goals

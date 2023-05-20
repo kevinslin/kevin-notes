@@ -51,8 +51,8 @@ class Note:
         body = content
         id = metadata["id"]
         htag = metadata.get("htag", "none")
+        topic = metadata.get("topic", "none")
         tags = metadata.get("tags", [])
-        topic = htag
         created = datetime.fromtimestamp(metadata["created"] / 1000).isoformat()
         updated = datetime.fromtimestamp(metadata["updated"] / 1000).isoformat()
         path = str(filepath.relative_to(root))
@@ -122,8 +122,7 @@ def build_database(repo_path):
     for filepath in root.glob("dendron/**/*.md"):
         print(filepath)
         note = Note.get_note(filepath)
-        seen.append(id)
-
+        seen.append(note.id)
         try:
             row = table.get(note.path_slug)
             previous_body = row["body"]
@@ -163,7 +162,6 @@ def build_database(repo_path):
 def delete_removed_notes(db: sqlite_utils.Database, seen: List[str]):
     seen_clean = [f"'{x}'" for x in seen]
     sql = f'delete from note where id not in ({",".join(seen_clean)})'
-    print(sql)
     cursor = db.execute(sql)
     db.conn.commit()
     print("Deleted {} notes".format(cursor.rowcount))
