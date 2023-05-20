@@ -1,9 +1,10 @@
 ---
 id: 5ducptgvq2er53s1wgrgr7d
-title: Public
+title: Daily Journal
 desc: ''
-updated: 1683344123061
+updated: 1684499933305
 created: 1683344053818
+htag: journal
 ---
 
 ## Goals
