@@ -2,8 +2,10 @@
 id: v4nk0oga2gx75dzpmnhmpv4
 title: Pruning (git) history
 desc: ''
-updated: 1684688533786
+updated: 1684689214179
 created: 1684688396721
+topic: git
+htag: post
 ---
 
 ## Context
