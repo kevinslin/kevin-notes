@@ -2,6 +2,8 @@
 
 from .environment import FernApiEnvironment
 from .resources import (
+    MergeVaultsRequest,
+    MergeVaultsResponse,
     RenderMarkdownMode,
     RenderMarkdownRequest,
     RenderMarkdownResponse,
@@ -12,6 +14,8 @@ from .resources import (
 
 __all__ = [
     "FernApiEnvironment",
+    "MergeVaultsRequest",
+    "MergeVaultsResponse",
     "RenderMarkdownMode",
     "RenderMarkdownRequest",
     "RenderMarkdownResponse",

@@ -9,6 +9,8 @@ import pydantic
 from ...core.api_error import ApiError
 from ...core.jsonable_encoder import jsonable_encoder
 from ...environment import FernApiEnvironment
+from .types.merge_vaults_request import MergeVaultsRequest
+from .types.merge_vaults_response import MergeVaultsResponse
 from .types.render_markdown_request import RenderMarkdownRequest
 from .types.render_markdown_response import RenderMarkdownResponse
 from .types.sync_to_request import SyncToRequest
@@ -49,6 +51,21 @@ class DendronClient:
             raise ApiError(status_code=_response.status_code, body=_response.text)
         raise ApiError(status_code=_response.status_code, body=_response_json)
 
+    def vaults_merge(self, *, request: MergeVaultsRequest) -> MergeVaultsResponse:
+        _response = httpx.request(
+            "POST",
+            urllib.parse.urljoin(f"{self._environment.value}/", "vaults/merge"),
+            json=jsonable_encoder(request),
+            timeout=60,
+        )
+        if 200 <= _response.status_code < 300:
+            return pydantic.parse_obj_as(MergeVaultsResponse, _response.json())  # type: ignore
+        try:
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, body=_response.text)
+        raise ApiError(status_code=_response.status_code, body=_response_json)
+
 
 class AsyncDendronClient:
     def __init__(self, *, environment: FernApiEnvironment = FernApiEnvironment.PRODUCTION):
@@ -80,6 +97,22 @@ class AsyncDendronClient:
             )
         if 200 <= _response.status_code < 300:
             return pydantic.parse_obj_as(SyncToResponse, _response.json())  # type: ignore
+        try:
+            _response_json = _response.json()
+        except JSONDecodeError:
+            raise ApiError(status_code=_response.status_code, body=_response.text)
+        raise ApiError(status_code=_response.status_code, body=_response_json)
+
+    async def vaults_merge(self, *, request: MergeVaultsRequest) -> MergeVaultsResponse:
+        async with httpx.AsyncClient() as _client:
+            _response = await _client.request(
+                "POST",
+                urllib.parse.urljoin(f"{self._environment.value}/", "vaults/merge"),
+                json=jsonable_encoder(request),
+                timeout=60,
+            )
+        if 200 <= _response.status_code < 300:
+            return pydantic.parse_obj_as(MergeVaultsResponse, _response.json())  # type: ignore
         try:
             _response_json = _response.json()
         except JSONDecodeError:
