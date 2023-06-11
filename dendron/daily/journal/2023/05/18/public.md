@@ -6,6 +6,7 @@ updated: 1684602172909
 created: 1684436427516
 htag: journal
 topic: schemas
+tags: []
 ---
 
 Had some time to work on my [digital notes](https://github.com/kevinslin/kevinweblog.git) today. 

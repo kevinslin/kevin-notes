@@ -6,6 +6,7 @@ updated: 1684602154546
 created: 1684380089972
 htag: journal
 topic: schemas
+tags: []
 ---
 
 Been working on a new project involving syncing data from various CRMs into a datawarehouse and then syncing that data back into said CRMs. 

@@ -2,11 +2,16 @@
 
 from .environment import FernApiEnvironment
 from .resources import (
+    FilterOptions,
+    IndexVaultsRequest,
+    IndexVaultsResponse,
     MergeVaultsRequest,
     MergeVaultsResponse,
     RenderMarkdownMode,
     RenderMarkdownRequest,
     RenderMarkdownResponse,
+    RepairVaultsRequest,
+    RepairVaultsResponse,
     SyncToRequest,
     SyncToResponse,
     dendron,
@@ -14,11 +19,16 @@ from .resources import (
 
 __all__ = [
     "FernApiEnvironment",
+    "FilterOptions",
+    "IndexVaultsRequest",
+    "IndexVaultsResponse",
     "MergeVaultsRequest",
     "MergeVaultsResponse",
     "RenderMarkdownMode",
     "RenderMarkdownRequest",
     "RenderMarkdownResponse",
+    "RepairVaultsRequest",
+    "RepairVaultsResponse",
     "SyncToRequest",
     "SyncToResponse",
     "dendron",

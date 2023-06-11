@@ -2,21 +2,31 @@
 
 from . import dendron
 from .dendron import (
+    FilterOptions,
+    IndexVaultsRequest,
+    IndexVaultsResponse,
     MergeVaultsRequest,
     MergeVaultsResponse,
     RenderMarkdownMode,
     RenderMarkdownRequest,
     RenderMarkdownResponse,
+    RepairVaultsRequest,
+    RepairVaultsResponse,
     SyncToRequest,
     SyncToResponse,
 )
 
 __all__ = [
+    "FilterOptions",
+    "IndexVaultsRequest",
+    "IndexVaultsResponse",
     "MergeVaultsRequest",
     "MergeVaultsResponse",
     "RenderMarkdownMode",
     "RenderMarkdownRequest",
     "RenderMarkdownResponse",
+    "RepairVaultsRequest",
+    "RepairVaultsResponse",
     "SyncToRequest",
     "SyncToResponse",
     "dendron",

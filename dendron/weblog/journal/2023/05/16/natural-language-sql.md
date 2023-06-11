@@ -6,6 +6,7 @@ updated: 1684603588177
 created: 1684253612262
 htag: ideas
 topic: schemas
+tags: []
 ---
 
 Imagine if you could query your knowledge base with SQL. 

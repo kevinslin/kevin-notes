@@ -6,6 +6,7 @@ updated: 1684602064442
 created: 1684545450170
 htag: journal
 topic: llm
+tags: []
 ---
 
 Been working with GPT to classify AWS service links and running into some issues with hallucinations. 

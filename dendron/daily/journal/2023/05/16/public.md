@@ -6,6 +6,7 @@ updated: 1684602197199
 created: 1684298143071
 htag: journal
 topic: llm
+tags: []
 ---
 
 Experimenting with using langchain and jupyter notebooks for ad-hoc tasks. 
