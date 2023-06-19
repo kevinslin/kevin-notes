@@ -5,6 +5,7 @@ desc: ''
 updated: 1686516376326
 created: 1686515517693
 topic: journal
+tags: []
 ---
 
 Second week after starting the pivot in earnest. 

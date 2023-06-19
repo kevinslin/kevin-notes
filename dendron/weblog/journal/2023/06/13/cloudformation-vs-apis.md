@@ -5,6 +5,7 @@ desc: ''
 updated: 1686703213817
 created: 1686702730467
 topic: aws
+tags: []
 ---
 
 Some thoughts about infrastructure as code (IaC) build on top of cloudformation (eg. CDK, SAM) vs IaC build on top of APIs (eg. Terraform, Pulumi)
