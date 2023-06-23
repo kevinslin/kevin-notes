@@ -5,6 +5,7 @@ desc: ''
 updated: 1687147664562
 created: 1687145068171
 topic: journal
+tags: []
 ---
 
 Third week after the pivot. How time flies.

@@ -5,6 +5,7 @@ desc: ''
 updated: 1687133946114
 created: 1687126805893
 topic: devops
+tags: []
 ---
 
 For observability, I'm talking about metrics, logs and traces

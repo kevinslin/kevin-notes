@@ -12,6 +12,7 @@ class MergeVaultsRequest(pydantic.BaseModel):
     src: str
     dest: str
     exclude: str
+    extra_metadata: typing.Optional[typing.Dict[str, typing.Any]] = pydantic.Field(alias="extraMetadata")
 
     def json(self, **kwargs: typing.Any) -> str:
         kwargs_with_defaults: typing.Any = {"by_alias": True, "exclude_unset": True, **kwargs}
@@ -23,4 +24,5 @@ class MergeVaultsRequest(pydantic.BaseModel):
 
     class Config:
         frozen = True
+        allow_population_by_field_name = True
         json_encoders = {dt.datetime: serialize_datetime}
