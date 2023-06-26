@@ -2,8 +2,9 @@
 id: 9nf0hva0ezg3q0le4tq5skr
 title: On Logs
 desc: ''
-updated: 1687527915594
+updated: 1687530393742
 created: 1687494535155
+topic: devops
 ---
 
 ## What are logs
