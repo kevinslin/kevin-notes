@@ -2,15 +2,14 @@
 id: 22pew1kmm46mv6myy9fmni0
 title: Weekly Review
 desc: ''
-updated: 1687748420832
+updated: 1688315280474
 created: 1687748241359
 topic: journal
 tags: []
 ---
 
 Fourth week of pivot. 
-Circling in on both pivot as well as cofounder. 
-
+Circling in on both pivot as well as co-founder. 
 
 ### Failing to draw lines between ‘script’ and ‘program’ | Hacker News
 - url: https://www.notion.so/Failing-to-draw-lines-between-script-and-program-Hacker-News-4d43ad2fe13148e1926531c59a7a7662?pvs=4
