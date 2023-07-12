@@ -11,5 +11,5 @@ datasette-sitemap>=1.0
 s3-credentials
 shot-scraper
 python-frontmatter
-pydantic
+pydantic==1.10.7
 backports.cached-property
