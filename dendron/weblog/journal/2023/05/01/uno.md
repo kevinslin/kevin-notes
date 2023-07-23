@@ -2,10 +2,11 @@
 id: rgbu0f0a47z4hb97s8e8bii
 title: Uno
 desc: ''
-updated: 1684296839749
+updated: 1690125023311
 created: 1682933921934
 htag: thought
 tags: []
+topic: journal
 ---
 
 I started [blogging in 2013](https://www.kevinslin.com/notes/806c4d93-da28-4002-b454-b183c37441f6/). 
