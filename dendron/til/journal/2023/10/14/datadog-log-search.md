@@ -2,19 +2,19 @@
 id: b0hinj9ypg1hvmp5arfge1v
 title: Datadog Log Search
 desc: ''
-updated: 1697341493184
+updated: 1701577319949
 created: 1697341393003
 tags: []
-topic: null
+topic: o11ty
 ---
 
-
-### search within an array
+## Syntax for searching within an array of objects
+ 
 ```
-@{myarray}.{key}:"foo"
+@{PATH_TO_ARRAY}.{PATH_TO_ARRAY_OBJ_PROPERTY}:"foo"
 ```
 
-- data
+Given the following data
 ```json
 {
     "entries": [
@@ -28,12 +28,7 @@ topic: null
 }
 ```
 
-- query: match
+Search for `entries` that contain the `value:foo`
 ```
 @entries.value:"foo"
-```
-
-- query: nomatch
-```
-@entries.value:"somevalue"
 ```
