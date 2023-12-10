@@ -17,7 +17,7 @@ From Abraham Lincoln to Steve Jobs. Benjamin Franklin to Elon Musk. The bum on t
 
 When you don't get love and security from your family, you compensate in other ways. You can numb the pain through drugs and depravity. You can find temporary substitutes in fame and fortune. While one path is reviled and the other is lauded, they both come from the same place. 
 
-Two brothers grow up in a house with an Alcoholic father. one becomes a drunk and is rarely seen sober. the other becomes a priest and has never touched a bottle. when asked how they became the way they are, they both respond the same. 
+The parable of two brothers goes like this. Two brothers grow up in a house with an alcoholic father. one becomes a drunk and is rarely seen sober. the other becomes a priest and has never touched a bottle. when asked how they became the way they are, they both respond the same. 
 
 > My circumstances being what they are, how could I have turned out any different?
 
