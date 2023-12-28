@@ -2,7 +2,7 @@
 id: on46j48g8qg8b5avbx9a99o
 title: Weekly Review
 desc: ''
-updated: 1703654655197
+updated: 1703740504463
 created: 1703654002878
 ---
 
@@ -19,4 +19,16 @@ He is also the first person I've heard to invest in a company by lending the com
 Sheila Heen is a new york times best selling author on the art of communication and feedback. 
 
 Something she said that has stuck with me - "our relationships are defined by hard conversations". These conversations are not things that happen at the edges - they are at the core of our relationships.
+
+### [In the long run, we're all Dad | Hacker News](https://news.ycombinator.com/item?id=38733440)
+
+Scott Alexander is a psychologist and one of my favorite people on the internet. He recently became a father to twins and writes about the experience in Scott Alexander fashion. 
+
+Parenthood is like fight club - once you're in it, you understand. Some lines that stood out for me:
+
+> [newborns are] surprise minimization engines 
+
+> Parents are supposed to teach their children the skills they need to navigate the world. This already feels somewhat obsolete - where are the Google programmers who were taught Python by their fathers, or the Instagram influencers who learned content creation on their mother’s knee? Soon it will be completely hopeless. Where we’re going there are no roads.
+
+> There is a secret known only to parents of twins, medical residents, and Alexey Guzey: the human body does not actually need sleep. After 31 hours awake, you get an integer overflow in God’s database and go back to being well-rested again. Also you gain the ability to see angels.”
 
