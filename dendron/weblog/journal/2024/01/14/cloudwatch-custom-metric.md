@@ -2,7 +2,7 @@
 id: i4vnlfpqhmq2w8l8jxhutf5
 title: What is a cloudwatch custom metric?
 desc: ''
-updated: 1705258011385
+updated: 1705259009939
 created: 1705257929597
 topic: aws
 tags:
@@ -67,3 +67,7 @@ ps. Just for fun, I retried the google search with "+ reddit". Lo and behold...
 ![reddit result](https://ik.imagekit.io/fpjzhqpv1/what_is_a_cloudwatch_custom_metric___reddit_JkP0k8tjq.png?updatedAt=1705256723110)
 
 ![answer](https://ik.imagekit.io/fpjzhqpv1/Cursor_and_Is_there_a_comprehensive_guide_to_custom_CloudWatch_metrics____aws_rXn3ukSmp.png?updatedAt=1705256878060)
+
+pss.[datadog](https://docs.datadoghq.com/account_management/billing/custom_metrics/?tab=countrate) by contrast does a great job at explaining what a custom metric is upfront
+![datadog custom metrics](https://ik.imagekit.io/fpjzhqpv1/Cursor_and_Custom_Metrics_Billing_mzQ9n8itC.png?updatedAt=1705258969080)
+
