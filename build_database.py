@@ -15,7 +15,7 @@ import sqlite_utils
 from sqlite_utils.db import NotFoundError,  COLUMN_TYPE_MAPPING
 
 sys.path.append(".")
-COLUMN_TYPE_MAPPING.update(UnicodeWithAttrs, "TEXT")
+COLUMN_TYPE_MAPPING.update({UnicodeWithAttrs: "TEXT"})
 # from dendron_sdk.client import DendronClient
 # from dendron_sdk.environment import FernApiEnvironment
 from pathlib import Path
