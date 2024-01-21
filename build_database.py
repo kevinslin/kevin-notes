@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+import markdown2
 import os
 import pathlib
 import sys
@@ -13,13 +14,13 @@ import sqlite_utils
 from sqlite_utils.db import NotFoundError
 
 sys.path.append(".")
-from dendron_sdk.client import DendronClient
-from dendron_sdk.environment import FernApiEnvironment
+# from dendron_sdk.client import DendronClient
+# from dendron_sdk.environment import FernApiEnvironment
 from pathlib import Path
 
 
 root = pathlib.Path(__file__).parent.resolve()
-DENDRON_CLIENT = DendronClient(environment=FernApiEnvironment.LOCAL)
+# DENDRON_CLIENT = DendronClient(environment=FernApiEnvironment.LOCAL)
 GITHUB_BASE_URL = "https://github.com/kevinslin/kevinweblog"
 
 # === Types
@@ -81,39 +82,13 @@ class Note:
 #
 
 def render_md(body, path, record):
-    retries = 0
-    while retries < 3:
-        headers = {}
-        if os.environ.get("MARKDOWN_GITHUB_TOKEN"):
-            headers = {
-                "authorization": "Bearer {}".format(
-                    os.environ["MARKDOWN_GITHUB_TOKEN"]
-                )
-            }
-        response = httpx.post(
-            "https://api.github.com/markdown",
-            json={
-                # mode=gfm would expand #13 issue links and suchlike
-                "mode": "markdown",
-                "text": body,
-            },
-            headers=headers,
-        )
-        if response.status_code == 200:
-            record["html"] = response.text
-            print("Rendered HTML for {}".format(path))
-            break
-        elif response.status_code == 401:
-            assert False, "401 Unauthorized error rendering markdown"
-        else:
-            print(response.status_code, response.headers)
-            print("  sleeping 60s")
-            time.sleep(60)
-            retries += 1
-    else:
-        assert False, "Could not render {} - last response was {}".format(
-            path, response.headers
-        )
+    # Convert markdown to HTML using markdown2
+    html = markdown2.markdown(body, extras=["fenced-code-blocks", "tables"])
+
+    # The rendered HTML is stored in the record
+    record["html"] = html
+    print("Rendered HTML for {}".format(path))
+
 
 def build_database(repo_path):
     db = sqlite_utils.Database(repo_path / "notes.db")

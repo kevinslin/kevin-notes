@@ -20,6 +20,7 @@ shot-scraper = "*"
 python-frontmatter = "*"
 pydantic = "1.10.7"
 "backports.cached-property" = "*"
+markdown2 = "*"
 
 [dev-packages]
 
