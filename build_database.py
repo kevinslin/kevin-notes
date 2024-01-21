@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 import markdown2
+from markdown2 import UnicodeWithAttrs
 import os
 import pathlib
 import sys
@@ -11,9 +12,10 @@ from urllib.parse import urlencode
 import frontmatter
 import httpx
 import sqlite_utils
-from sqlite_utils.db import NotFoundError
+from sqlite_utils.db import NotFoundError,  COLUMN_TYPE_MAPPING
 
 sys.path.append(".")
+COLUMN_TYPE_MAPPING.update(UnicodeWithAttrs, "TEXT")
 # from dendron_sdk.client import DendronClient
 # from dendron_sdk.environment import FernApiEnvironment
 from pathlib import Path
@@ -83,7 +85,7 @@ class Note:
 
 def render_md(body, path, record):
     # Convert markdown to HTML using markdown2
-    html = markdown2.markdown(body, extras=["fenced-code-blocks", "tables"])
+    html: str = markdown2.markdown(body, extras=["fenced-code-blocks", "tables"]) 
 
     # The rendered HTML is stored in the record
     record["html"] = html
