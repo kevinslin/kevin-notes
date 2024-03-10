@@ -2,14 +2,14 @@
 id: 1s12g2q9h5hg74n0uhcr8n3
 title: The Tao Te Ching
 desc: ''
-updated: 1710044021129
+updated: 1710044257228
 created: 1710043991672
 topic: books
 ---
 
 ## Review
 
-The Tao Te Ching is a collection of 81 chapters of Chinese classical text that describe the essence of Taoism. Loosely translated as "the way", Taoism is a mix of philosophy and religion that has deep roots in Chinese culture. 
+The [Tao Te Ching](https://amzn.to/3Pfxlql) is a collection of 81 chapters of Chinese classical text that describe the essence of Taoism. Loosely translated as "the way", Taoism is a mix of philosophy and religion that has deep roots in Chinese culture. 
 
 At the heart of the "Tao Te Ching" is the attempt to describe the indescribable Tao. The chapters are like  "fingers pointing at the moon; if you watch the finger, you can’t see the moon."
 
