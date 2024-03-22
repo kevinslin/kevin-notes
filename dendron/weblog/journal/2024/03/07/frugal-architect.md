@@ -2,9 +2,9 @@
 id: pmrx41e9xgcacmwkij2j9z5
 title: Frugal Architec
 desc: ''
-updated: 1709870874391
+updated: 1711127558739
 created: 1709870439260
-topic: thoguhts
+topic: thoughts
 ---
 
 > Without careful observation and measurement, the true costs of operating a system remain invisible. Like a utility meter tucked away in a basement, lack of visibility enables wasteful habits. Making meters more visible can profoundly shift behaviors.
