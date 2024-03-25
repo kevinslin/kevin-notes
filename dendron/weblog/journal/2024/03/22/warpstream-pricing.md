@@ -2,7 +2,7 @@
 id: wp02ox8e4mh8ltyu34hj880
 title: Warpstream Pricing
 desc: ''
-updated: 1711128350620
+updated: 1711387305163
 created: 1711127361027
 topic: review
 ---
@@ -45,7 +45,7 @@ The tldr: they build a cloud native service that uses object store as the backen
 
 ### 3. Effective competitor questions
 
-"Competitor Questions" is a term I use when a service lists questions that are clearly a shot at showcasing the weakness of competitors. For example - newrelic's [pricing page](https://newrelic.com/pricing) has a bit about "Do you charge per host". This is aimed at datadog and other competitors that have per host pricing which new relic can happily answer **no** to.  In trun, the rest of the industry has a question in their FAQ about "Do you charge per seat"...
+"Competitor Questions" is a term I use when a service lists questions that are clearly a shot at showcasing the weakness of competitors. For example - newrelic's [pricing page](https://newrelic.com/pricing) has a bit about "Do you charge per host". This is aimed at datadog and other competitors that have per host pricing which new relic can happily answer **no** to.  In turn, the rest of the industry has a question in their FAQ about "Do you charge per seat"...
 
 WarpStream has the following competitor questions which are all properties of vendors hosting a traditional kafka service:
 - Is replication included in WarpStream's storage pricing?
