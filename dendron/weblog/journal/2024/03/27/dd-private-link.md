@@ -2,9 +2,9 @@
 id: f3vunj91wnnqh5b3wiq0duq
 title: Save 90% on Datadog Egress
 desc: ''
-updated: 1711594476707
+updated: 1711594545489
 created: 1711594313403
-topic: o11y
+topic: datadog
 ---
 
 If you use Datadog with AWS, here is a simple change you can do to save 90% of your egress fees immediately.
