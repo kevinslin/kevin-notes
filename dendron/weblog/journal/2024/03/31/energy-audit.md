@@ -2,7 +2,7 @@
 id: v9m03ojx00o44yyajbdvdzn
 title: Energy Audit
 desc: Personal Energy Accounting
-updated: 1711997392076
+updated: 1711997527057
 created: 1711901688679
 topic: journal
 ---
@@ -31,4 +31,4 @@ Drain Energy:
 - (over) consumption of media
 - regression
 
-While certain details change over time (eg. forward momentum at work is now accounts based vs users based) , the themes of this list (do excellent work, be around good people, etc) have been consistent for as long as I tracked this (~10 years now).
+While certain details change over time (eg. forward momentum at work is now accounts based vs users based), the themes of this list (do excellent work, be around good people, etc) have been consistent for as long as I tracked this (~10 years now).
