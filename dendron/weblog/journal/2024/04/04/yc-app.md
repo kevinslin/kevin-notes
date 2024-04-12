@@ -1,8 +1,8 @@
 ---
 id: 11w8642ta4601edqztjgpt4
-title: Yc Ap
+title: Yc App
 desc: ''
-updated: 1712275679483
+updated: 1712952556868
 created: 1712275679483
 topic: advice
 ---

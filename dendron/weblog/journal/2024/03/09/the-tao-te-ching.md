@@ -2,7 +2,7 @@
 id: 1s12g2q9h5hg74n0uhcr8n3
 title: The Tao Te Ching
 desc: ''
-updated: 1710044257228
+updated: 1712895342802
 created: 1710043991672
 topic: books
 ---
@@ -30,10 +30,13 @@ Reading the chapters, you feel there is an understanding that starts to form, li
 - the **great way is easy**, yet people prefer the side path
 - simplicity (keep to source), patience (see reality), and compassion (reconcile)
 - the best enter into a spirit of play
-- the tao cannot be thought into existence and do not need to be - they are easy to understand and easy to put into practice
+- the tao cannot be thought into existence and does not need to be - they are easy to understand and easy to put into practice
 - all things change and you will die - let go of control
 - be supple and yielding
 - see the world as it is - like a mirror, it shows everything and does not retain the image after it has passed 
 - you don't change after enlightenment, but you are free from delusion
 - the master doesn't know, he just is 
-- trust natural response
+- trust natural responses
+
+
+<!-- [[books.tao-te-ching]] -->
