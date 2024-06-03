@@ -12,7 +12,7 @@ plugins:
       Disallow: /notes
   datasette-sitemap:
     sql: |-
-      select '/' || topic || '/' || slug as path from note
+      select '/pages/' || topic || '-' || slug || '-' || id as path from note
 databases:
   notes:
     queries:
