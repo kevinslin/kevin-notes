@@ -2,7 +2,7 @@
 id: biogma5h1rqyel25cpbargk
 title: How to Work With
 desc: ''
-updated: 1722303067105
+updated: 1722303405628
 created: 1722303018154
 topic: self
 ---
@@ -15,7 +15,7 @@ Welcome to Kevin's user manual. If you're reading this, we'll likely collaborate
 
 This guide is meant to give you a quick overview of my particular quirks, communication styles, and values. This is to help us develop a strong working relationship and collaborate more effectively! If this inspires you to write your own user manual, please forward that to me so that I can take the time to know you better!
 
-<!-- > Credit to [Julie Zhuo's User Manual](https://lg.substack.com/p/the-looking-glass-a-user-guide-to) that served as a large inspiration for this one -->
+> This manual was largely inspired by [Julie Zhuo's User Manual](https://lg.substack.com/p/the-looking-glass-a-user-guide-to) 
 
 ## How I view success
 - As an individual contributor, success is creating significant business impact. I like to understand what the most important problems and/or opportunities are and work on the projects where my particular skills can make the most impact
