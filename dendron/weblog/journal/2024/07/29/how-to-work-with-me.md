@@ -1,8 +1,8 @@
 ---
 id: biogma5h1rqyel25cpbargk
-title: How to Work With
+title: How to Work With Me
 desc: ''
-updated: 1722303405628
+updated: 1723313394965
 created: 1722303018154
 topic: self
 ---

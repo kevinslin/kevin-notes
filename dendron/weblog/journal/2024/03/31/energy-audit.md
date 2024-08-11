@@ -2,7 +2,7 @@
 id: v9m03ojx00o44yyajbdvdzn
 title: Energy Audit
 desc: Personal Energy Accounting
-updated: 1711997527057
+updated: 1723313596757
 created: 1711901688679
 topic: journal
 ---
@@ -11,9 +11,10 @@ Every once in a while, I do an "energy audit" - I go over a past number of weeks
 
 For 2024 (thus far), my audit is as follows.
 
-Give energy:
+### Give energy:
+
 - do excellent work
-- be around good people
+- be around good people 
 - forward momentum
 - hard physical exercise
 - focusing on 1-2 things at a time
@@ -21,9 +22,10 @@ Give energy:
 - writing
 - self growth
 
-Drain Energy:
+### Drain Energy:
+
 - cookie cutter work
-- put up with bad people
+- people that drain me
 - no forward momentum
 - being injured 
 - frequent context switching
