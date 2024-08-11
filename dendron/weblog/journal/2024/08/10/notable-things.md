@@ -1,9 +1,10 @@
 ---
 id: vj3n9viu0nhxo9lvmjdd8vs
-title: Notable Things of 2024-08-11
+title: Notable Things of 2024-08-10
 desc: ''
-updated: 1723351844460
+updated: 1723351922501
 created: 1723351775886
+topic: journal
 ---
 
 ### 1. Richard Koch on Happiness Islands 
