@@ -2,7 +2,7 @@
 id: os5yznw27gw0nozozjghi2z
 title: The Power of Now
 desc: ''
-updated: 1728249110857
+updated: 1728249489507
 created: 1728248949567
 topic: books
 ---
@@ -20,5 +20,6 @@ A helpful reminder when things seem too serious
 - surrender totally to the present
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/41KrouGOE-L._SL200_.jpg)
+
 - Author: Eckhart Tolle
 - [Amazon Link](https://amzn.to/3Ygc0kj)
