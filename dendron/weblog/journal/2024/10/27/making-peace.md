@@ -2,8 +2,9 @@
 id: md9eltgvn1dvxh9eq576ftb
 title: Making Peace
 desc: ''
-updated: 1730078948755
+updated: 1730079017820
 created: 1730078934202
+topic: thoughts
 ---
 
 Peace is hard. According to the [UN](https://www.unis.org/juniorschool/peace-table), “of the past 3,400 years, humans have been entirely at peace for 268 of them, or just 8 percent of recorded history.”
