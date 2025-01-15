@@ -4,8 +4,8 @@ title: Weekly Revi
 desc: ''
 updated: 1693757888454
 created: 1691336640970
-tags: []
 topic: journal
+tags: []
 ---
 
 ## Reading Roundup
@@ -24,7 +24,7 @@ Jack is one of my favorite people in the world. Works in pallitative care and he
 
 Everytime I listen to Jack, I walk away with lines that get to the core of what it means to be alive. This interview was no exception.
 
-@atisa
+[[people.atisa]]
 
 Jack Gilbert Poem
 
