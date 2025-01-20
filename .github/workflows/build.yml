@@ -81,14 +81,39 @@ jobs:
     #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     #   run: |-
     #     s3-credentials put-object note.simonwillison.net notes.db main/notes.db
-    - name: Deploy Datasette using Vercel
+    # - name: Deploy Datasette using Vercel
+    #   env:
+    #     NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
+    #   run: |-
+    #     cd main
+    #     datasette publish vercel notes.db \
+    #       --token $NOW_TOKEN \
+    #       --project kevin-weblog \
+    #       --metadata metadata.yaml \
+    #       --static static:static \
+    #       --install datasette-template-sql \
+    #       --install "datasette-sitemap>=1.0" \
+    #       --install "datasette-atom>=0.7" \
+    #       --install datasette-json-html \
+    #       --install beautifulsoup4 \
+    #       --install "datasette-debug-asgi>=1.1" \
+    #       --install "datasette-graphql>=2.2" \
+    #       --install datasette-block-robots \
+    #       --plugins-dir plugins \
+    #       --template-dir templates \
+    #       --generate-dir generated \
+    #       --public \
+    #       --debug
+    - name: Install Fly
+      run: |
+        curl -L https://fly.io/install.sh | sh
+    - name: Deploy Datasette using Fly
       env:
-        NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
+        FLY_API_TOKEN: ${{ secrets.FLY_TOKEN }}
       run: |-
         cd main
-        datasette publish vercel notes.db \
-          --token $NOW_TOKEN \
-          --project kevin-weblog \
+        PATH=$PATH:/home/runner/.fly/bin/ datasette publish fly notes.db \
+          --app kevin-weblog \
           --metadata metadata.yaml \
           --static static:static \
           --install datasette-template-sql \
@@ -99,8 +124,7 @@ jobs:
           --install "datasette-debug-asgi>=1.1" \
           --install "datasette-graphql>=2.2" \
           --install datasette-block-robots \
+          --install datasette-llm-embed \
+          --install datasette-sqlite-vec \
           --plugins-dir plugins \
-          --template-dir templates \
-          --generate-dir generated \
-          --public \
-          --debug
+          --template-dir templates
