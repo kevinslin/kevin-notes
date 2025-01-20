@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build:db": "python build_database.py",
-    "start": "datasette serve notes.db --metadata metadata.yaml --static static:static --plugins-dir plugins --template-dir templates ",
+    "start": "datasette serve notes.db --metadata metadata.yaml --static static:static --plugins-dir plugins --template-dir templates",
     "reset": "rm notes.db && rm -r dendron",
     "s:refresh": "yarn build:db && yarn start",
     "script:regenerate": ""
