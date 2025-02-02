@@ -2,8 +2,9 @@
 id: rgyttdp613q8iewipo5n9lr
 title: Migrating from Webflow to S3
 desc: ''
-updated: 1737175897228
+updated: 1738528185336
 created: 1737175897228
+topic: webtech
 ---
 
 Its 2025. Some things change. Publishing a static site on S3 remains as byzantine as setting up salesforce.
