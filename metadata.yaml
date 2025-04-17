@@ -1,6 +1,6 @@
 title: Today I Learned
-about: simonw/note
-about_url: https://github.com/simonw/note
+about: kevinslin/note
+about_url: https://github.com/kevinslin/til
 plugins:
   datasette-graphql:
     path: /-/graphql
@@ -13,6 +13,8 @@ plugins:
   datasette-sitemap:
     sql: |-
       select '/pages/' || topic || '-' || slug || '-' || id as path from note
+      UNION
+      select '/topics/' || topic as path from note
 databases:
   notes:
     queries:
