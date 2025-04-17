@@ -1,6 +1,6 @@
 ---
 id: maohq79d8hghn6kgnw2j6ft
-title: Weekly Review
+title: Weekly Review for 2023-07-30
 desc: ''
 updated: 1690729956317
 created: 1690728271026

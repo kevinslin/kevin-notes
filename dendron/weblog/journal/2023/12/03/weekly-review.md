@@ -1,6 +1,7 @@
 ---
+topic: journal
 id: czyru0nz2onaq5awb4pltyh
-title: Weekly Review
+title: Weekly Review for 2023-12-03
 desc: ''
 updated: 1701559802146
 created: 1701559657411

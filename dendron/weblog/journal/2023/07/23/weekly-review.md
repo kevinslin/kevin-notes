@@ -1,6 +1,6 @@
 ---
 id: kicbxb08z0ah0jwyy2e5th6
-title: Weekly Review
+title: Weekly Review for 2023-07-23
 desc: ''
 updated: 1690123749591
 created: 1690123153214

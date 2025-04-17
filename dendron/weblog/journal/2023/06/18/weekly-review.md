@@ -1,6 +1,6 @@
 ---
 id: u10mbsa9gg414yfi8nkzf1m
-title: Weekly Review
+title: Weekly Review for 2023-06-18
 desc: ''
 updated: 1687147664562
 created: 1687145068171

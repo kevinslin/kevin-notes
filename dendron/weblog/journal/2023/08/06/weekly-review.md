@@ -1,6 +1,6 @@
 ---
 id: ylge006k6g27vtjwpnbo6xs
-title: Weekly Revi
+title: Weekly Review for 2023-08-06
 desc: ''
 updated: 1693757888454
 created: 1691336640970

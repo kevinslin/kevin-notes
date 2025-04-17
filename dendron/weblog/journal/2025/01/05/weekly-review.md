@@ -1,6 +1,7 @@
 ---
+topic: journal
 id: eldjc8ebym5td9uz8rg4jc4
-title: Weekly Review
+title: Weekly Review for 2025-01-05
 desc: ''
 updated: 1736228503661
 created: 1736226961848

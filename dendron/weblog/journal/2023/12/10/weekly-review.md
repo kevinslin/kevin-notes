@@ -1,6 +1,6 @@
 ---
 id: o9774hn913f6rht4l64kbc2
-title: Weekly Review
+title: Weekly Review for 2023-12-10
 desc: ''
 updated: 1702269756484
 created: 1702267881117

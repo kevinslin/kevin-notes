@@ -1,6 +1,7 @@
 ---
+topic: journal
 id: qyiyczcumlczttta48huncz
-title: Weekly Review
+title: Weekly Review for 2023-10-08
 desc: ''
 updated: 1697380974721
 created: 1696801425310

@@ -1,6 +1,7 @@
 ---
+topic: journal
 id: yw3pnxy1kv9eqpekd8m0bmk
-title: Weekly Review
+title: Weekly Review for 2024-02-04
 desc: ''
 updated: 1706979757182
 created: 1706979587181

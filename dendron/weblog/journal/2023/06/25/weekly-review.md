@@ -1,6 +1,6 @@
 ---
 id: 22pew1kmm46mv6myy9fmni0
-title: Weekly Review
+title: Weekly Review for 2023-06-25
 desc: ''
 updated: 1688315280474
 created: 1687748241359

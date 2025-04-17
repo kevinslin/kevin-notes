@@ -1,6 +1,6 @@
 ---
 id: agqik8max9zfq4udemlxsku
-title: Weekly Review
+title: Weekly Review for 2023-07-02
 desc: ''
 updated: 1688315618197
 created: 1688315270935

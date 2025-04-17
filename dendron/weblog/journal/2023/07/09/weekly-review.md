@@ -1,6 +1,6 @@
 ---
 id: ejhwhccxe7griaxgompa1tu
-title: Weekly Review
+title: Weekly Review for 2023-07-09
 desc: ''
 updated: 1688869259497
 created: 1688861568697

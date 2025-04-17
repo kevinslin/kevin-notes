@@ -1,6 +1,7 @@
 ---
+topic: journal
 id: 8xzy1jtrxdgrzc0qffkrphp
-title: Weekly Review
+title: Weekly Review for 2024-01-21
 desc: ''
 updated: 1705856663951
 created: 1705856663951

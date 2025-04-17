@@ -1,6 +1,7 @@
 ---
+topic: journal
 id: on46j48g8qg8b5avbx9a99o
-title: Weekly Review
+title: Weekly Review for 2023-12-24
 desc: ''
 updated: 1703740504463
 created: 1703654002878

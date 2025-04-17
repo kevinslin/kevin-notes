@@ -1,6 +1,7 @@
 ---
+topic: journal
 id: 5ubiwx4b983kmfw2p6o9kda
-title: Weekly Review
+title: Weekly Review for 2023-10-29
 desc: ''
 updated: 1698597978351
 created: 1698597569711

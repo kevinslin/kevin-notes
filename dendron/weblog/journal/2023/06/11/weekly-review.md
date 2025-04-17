@@ -1,6 +1,6 @@
 ---
 id: ztuty6dr0sxn7f2cyacc0tt
-title: Weekly Review
+title: Weekly Review for 2023-06-11
 desc: ''
 updated: 1686516376326
 created: 1686515517693

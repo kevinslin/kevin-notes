@@ -1,6 +1,7 @@
 ---
+topic: journal
 id: z2su71ayygg4ygtg4pqtv3h
-title: Weekly Review
+title: Weekly Review for 2023-11-12
 desc: ''
 updated: 1699853684705
 created: 1699801961764

@@ -1,6 +1,7 @@
 ---
+topic: journal
 id: 0ssmbqrvek8145uv2kwljb6
-title: Weekly Review
+title: Weekly Review for 2023-08-20
 desc: ''
 updated: 1692504236939
 created: 1692503877262

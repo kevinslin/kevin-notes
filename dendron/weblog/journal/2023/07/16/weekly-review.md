@@ -1,6 +1,6 @@
 ---
 id: ob7jrgaaarj3xmb18goa6mv
-title: Weekly Review
+title: Weekly Review for 2023-07-16
 desc: ''
 updated: 1689515807637
 created: 1689515241820

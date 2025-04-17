@@ -1,6 +1,7 @@
 ---
+topic: journal
 id: nzgu9wonzzl6bv42ye3rd1a
-title: Weekly Review
+title: Weekly Review for 2025-01-12
 desc: ''
 updated: 1736867319572
 created: 1736867319572
