@@ -1,9 +1,24 @@
 {% extends "til_base.html" %}
 
-{% block title %}Kevin S Lin: Notes{% endblock %}<!DOCTYPE html>
+{% block title %}Notes from Kevin S Lin{% endblock %}<!DOCTYPE html>
 
 {% block extra_head %}
 <link href="https://github.com/kevinslin" rel="me">
+<link rel="canonical" href="https://notes.kevinslin.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@kevins8">
+<meta name="twitter:title" content="Notes from Kevin S Lin">
+<meta name="twitter:description" content="A log of learnings, thoughts, and records. Collected in kevinslin/kevinweblog">
+<meta name="twitter:image" content="https://ik.imagekit.io/fpjzhqpv1/image__Cup5oN8i.png?updatedAt=1744922118478">
+<meta name="twitter:image:alt" content="Screenshot of this article">
+<meta property="og:url" content="https://notes.kevinslin.com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Notes from Kevin S Lin">
+<meta property="og:description" content="A log of learnings, thoughts, and records. Collected in kevinslin/kevinweblog">
+<meta property="og:image" content="https://ik.imagekit.io/fpjzhqpv1/image__Cup5oN8i.png?updatedAt=1744922118478">
+<meta property="og:image:alt" content="Screenshot of this article">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="400">
 <style>
 input[type=search] {
     padding: .25em;
@@ -47,7 +62,7 @@ h1 {
 
 {% block body %}
 {% set note_count = sql("select count(*) from NOTE", database="notes")[0][0] %}
-<h1>Kevin S Lin: Notes</h1>
+<h1>Kevin's Notes</h1>
 <p> A log of learnings, thoughts, and records. Collected in <a href="https://github.com/kevinslin/kevinweblog">kevinslin/kevinweblog</a>. You may also enjoy <a href="https://bit.kevinslin.com/">my newsletter</a>.
 <br/>
 This site is a fork of <a href="https://github.com/simonw/til">simon/til</a>
