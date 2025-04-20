@@ -4,6 +4,7 @@ from datasette.utils.asgi import Response
 
 @hookimpl
 def register_routes():
+    print("register_routes")
     return (
         (
             r"^/note/note/(?P<topic>[^_]+)_(?P<slug>[^\.]+)\.md$",

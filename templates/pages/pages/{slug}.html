@@ -21,6 +21,7 @@
 {% block extra_head %}
 <link rel="stylesheet" href="https://notes.kevinslin.com/static/github-light.css">
 <link rel="canonical" href="https://notes.kevinslin.com{{noteURLPath(note)}}">
+<meta name="description" content="{{ note.body[:200] }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@kevins8">
 <meta name="twitter:title" content="{{ note.title }}">

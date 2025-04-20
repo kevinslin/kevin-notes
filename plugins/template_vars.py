@@ -13,7 +13,13 @@ def SITE_ROOT():
 
 def first_paragraph(html):
     soup = Soup(html, "html.parser")
-    return str(soup.find("p"))
+    paragraphs = soup.find_all("p")
+    for p in paragraphs:
+        # Skip paragraphs that only contain images
+        if p.find("img") and len(p.contents) == 1:
+            continue
+        return str(p)
+    return ""
 
 def noteURLSlugWithTopic(note):
     return f"{note['topic']}-{note['slug']}-{note['id']}"
