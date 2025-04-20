@@ -1,6 +1,6 @@
 ---
 id: bcyoh1ruh5b570m9vlhvgf9
-title: Daily Journal
+title: Classify AWS Services using LLMs
 desc: ''
 updated: 1684602064442
 created: 1684545450170
@@ -47,7 +47,7 @@ human_message_prompt = HumanMessagePromptTemplate.from_template("AWS Repo List:\
 chat_prompt = ChatPromptTemplate.from_messages([system_message, human_message_prompt])
 ```
 
-The syntax here is written from [langchain](en.wikipedia.org/wiki/LangChain), a popular open source software framework for applying LLMs. 
+The syntax here is written from langchain, a popular open source software framework for applying LLMs. 
 The system prompt tells GPT to match service names to git repositories. The two sentences at the end are a first layer guard against hallucinations, asking GPT to only use the given context and have a escape clause (`NO_MATCH_FOUND`) if it is unsure. Without this guard, GPT would otherwise generate matches for ALL services and make up git repository urls. 
 
 The human prompt feeds in the available AWS git repositories as well as the services. To make this prompt fit the content length, I divide the AWS service list into chunks of 15 elements each. Running this, GPT was able to match links for 76/106 services. 

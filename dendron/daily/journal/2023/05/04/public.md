@@ -1,6 +1,6 @@
 ---
 id: pqvq6wtxl0lfk5x22mpx5io
-title: Daily Journal
+title: Dendron Redeployment Challenges
 desc: ''
 updated: 1684602274982
 created: 1683254761339

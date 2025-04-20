@@ -1,6 +1,6 @@
 ---
 id: zckio8docgnws69fj5m9tcy
-title: Daily Journal
+title: LLMs and Langchain for Ad-hoc Tasks
 desc: ''
 updated: 1684602197199
 created: 1684298143071

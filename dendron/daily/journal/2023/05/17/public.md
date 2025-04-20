@@ -1,6 +1,6 @@
 ---
 id: anpq6f6k8jmby1eciy8zsr2
-title: Daily Journal
+title: CRM Data Syncing Architecture
 desc: ''
 updated: 1684602154546
 created: 1684380089972

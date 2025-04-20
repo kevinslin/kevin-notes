@@ -13,10 +13,6 @@ topic: books
 
 ![rw-book-cover](https://images-na.ssl-images-amazon.com/images/I/5160TGGIZjL._SL200_.jpg)
 
-## Review
-
-TBD
-
 ## Takeaways
 - 4 parts: observations, feelings, needs, requests
 - we block compassion when we analyze others, don't take responsibility for our own actions, and communicate desires as demands

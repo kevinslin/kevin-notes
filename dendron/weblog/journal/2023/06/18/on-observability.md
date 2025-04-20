@@ -187,7 +187,7 @@ End2end observability platforms do all of it but most providers only provide one
 Error logs are generally associated with frontend applications. There's some sort of client side error and the stack trace is captured and logged.
 
 Examples:
-- [sentry](sentry.io/) (incumbent)
+- sentry (incumbent)
 - Logrocket 
 - Airbrake.io 
 

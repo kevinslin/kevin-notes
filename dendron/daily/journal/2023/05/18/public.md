@@ -1,6 +1,6 @@
 ---
 id: f4d5p74j0tgemp4tmdx114c
-title: Daily Journal
+title: Permanent IDs and URL Redirects for Digital Notes
 desc: ''
 updated: 1684602172909
 created: 1684436427516

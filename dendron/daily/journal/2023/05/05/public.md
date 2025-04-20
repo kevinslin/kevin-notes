@@ -1,6 +1,6 @@
 ---
 id: 5ducptgvq2er53s1wgrgr7d
-title: Daily Journal
+title: Reverting Dendron Binary Changes
 desc: ''
 updated: 1684603555084
 created: 1683344053818
