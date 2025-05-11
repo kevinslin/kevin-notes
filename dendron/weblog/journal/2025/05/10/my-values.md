@@ -4,7 +4,7 @@ title: My Values
 desc: ''
 updated: 1746922681971
 created: 1746922443110
-topics: self
+topic: self
 ---
 
 Values that I try to live by
