@@ -102,6 +102,7 @@ This site is a fork of <a href="https://github.com/simonw/til">simon/til</a>
 {% endfor %}
 </p>
 
+
 <h2>Recent Entries</h2>
 
 {% for note in sql("select * from note order by created_utc desc limit 30", database="notes") %}
@@ -109,6 +110,14 @@ This site is a fork of <a href="https://github.com/simonw/til">simon/til</a>
     {{ first_paragraph(note["html"]).replace("</p>", " &#8230; </p>")|safe }}
 {% endfor %}
 
+<h2>Recent Newsletter Posts</h2>
+
+{% for post in newsletter_entries(5) %}
+    <h3><span class="topic"><a href="/topics/{{ post.topic }}">{{ post.topic }}</a></span> <a href="{{ post.url }}" target="_blank" rel="noopener">{{ post.title }}</a> - {{ post.created[:10] }}</h3>
+    {{ first_paragraph(post["html"]).replace("</p>", " &#8230; </p>")|safe }}
+{% endfor %}
+
 <p><a href="/all">Browse all {{ til_count }} Entries</a></p>
+
 
 {% endblock %}
