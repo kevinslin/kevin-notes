@@ -27,7 +27,8 @@ databases:
           note
           join note_fts on note.rowid = note_fts.rowid
         where
-          note_fts match case
+          topic != 'newsletter'
+          and note_fts match case
             :q
             when '' then 'nomatchforthisterm'
             else escape_fts(:q)
